@@ -1,4 +1,4 @@
-# kat-footer [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
+# kat-footer 
 
 Footer component for KMT app
 
