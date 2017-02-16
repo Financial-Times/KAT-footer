@@ -20,7 +20,7 @@ class KatFooter {
     this.rootEl.removeAttribute('data-kat-footer--no-js');
     this.rootEl.setAttribute('data-kat-footer--js', '');
 
-    const store = configureStore(options);
+    const store = configureStore(options.data);
 
     ReactDOM.render(
       <Provider store={store}>

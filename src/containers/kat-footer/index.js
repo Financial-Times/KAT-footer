@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+// import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Footer from 'o-footer';
 import FooterRow from './../footer-row';
@@ -23,7 +24,7 @@ class KatFooterContainer extends Component {
     let footerClass = "o-footer o-footer--" + this.props.theme;
     return (
       <div>
-        <footer className={footerClass}  data-o-component="o-footer">
+        <footer className={footerClass} data-o-component="o-footer">
           <div className="o-footer__container">
             <FooterRow/>
             <FooterCopyright/>
@@ -36,8 +37,6 @@ class KatFooterContainer extends Component {
 }
 
 const mapStateToProps = (store) => {
-  console.log('kat-footer store view: ', store);
-  console.log(JSON.stringify(store));
   return {
     theme: store.KatFooterNs.katFooter.theme
   };

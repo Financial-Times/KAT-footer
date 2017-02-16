@@ -1,4 +1,5 @@
-import React, {PropTypes, Component} from 'react';
+// import React, {PropTypes, Component} from 'react';
+import React, { Component} from 'react';
 
 class MatrixGroup extends Component {
 

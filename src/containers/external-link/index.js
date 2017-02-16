@@ -1,4 +1,5 @@
-import React, { Component, PropTypes} from 'react';
+// import React, { Component, PropTypes} from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux';
 
 class ExternalLink extends Component {
@@ -30,6 +31,6 @@ const mapStateToProps = (store) => {
       label: store.KatFooterNs.externalLink.label,
       href: store.KatFooterNs.externalLink.href
     };
-}
+};
 
 export default connect(mapStateToProps)(ExternalLink);

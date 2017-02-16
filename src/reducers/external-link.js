@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+// import {PropTypes} from 'react';
 
 const defaultState = {
   label: 'More from the FT Group',

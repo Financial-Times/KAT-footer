@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+// import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import MatrixGroup from './../../components/matrix-group';
 
@@ -21,7 +22,7 @@ class FooterMatrix extends Component {
     if ( Array.isArray(props.matrix) && (props.matrix.length > 0) ){
       const matrix = props.matrix;
       return matrix.map((data, index) => {
-        return <MatrixGroup groupData={data} key={index}/>
+        return <MatrixGroup groupData={data} key={index}/>;
       });
     }
     return null;

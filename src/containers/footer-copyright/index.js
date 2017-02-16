@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+// import React, { Component, PropTypes } from 'react';
+import React, { Component} from 'react';
 import { connect } from 'react-redux';
 
 class FooterCopyright extends Component {

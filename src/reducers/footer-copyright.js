@@ -1,4 +1,4 @@
-import {PropTypes} from 'react';
+// import {PropTypes} from 'react';
 
 const defaultState = {
       header: 'Markets data delayed by at least 15 minutes. © THE FINANCIAL TIMES LTD 2017.',

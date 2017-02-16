@@ -1,4 +1,4 @@
-import { PropTypes } from 'react';
+// import { PropTypes } from 'react';
 
 const defaultState = {
   "matrix": [
@@ -51,6 +51,6 @@ const defaultState = {
 
 const matrix = (state = defaultState, action={}) => {
   return state;
-}
+};
 
 export default matrix;
