@@ -4,12 +4,14 @@ import externalLink from './external-link';
 import matrix from './matrix';
 import footerCopyright from './footer-copyright';
 import katFooter from './kat-footer';
+import legalLinks from './legal-links';
 
 const mainReducers = {
   externalLink,
   matrix,
   footerCopyright,
   katFooter,
+  legalLinks,
   helpers
 };
 
