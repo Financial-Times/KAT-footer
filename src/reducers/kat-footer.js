@@ -1,8 +1,8 @@
 // import {PropTypes} from 'react';
 
 const defaultState = {
-  theme : "theme-dark",
-  footerType: "full"
+  theme : "theme-light",
+  footerType: "short"
 };
 
 const katFooter = (state = defaultState, action={}) => {
