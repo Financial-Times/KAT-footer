@@ -6,7 +6,6 @@ import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
 import FooterBrand from './../../components/footer-brand';
 
-
 class KatFooterContainer extends Component {
   constructor(props) {
     super(props);
@@ -19,6 +18,10 @@ class KatFooterContainer extends Component {
 
   componentDidMount() {
     Footer.init();
+
+    if (this.refs.theFooterPadding) {
+      this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight}px`;
+    }
   }
 
   render() {
@@ -32,13 +35,16 @@ class KatFooterContainer extends Component {
     }
 
     return (
-      <footer className={footerClass} data-o-component="o-footer">
-        <div className="o-footer__container">
-          {footerType}
-          <FooterCopyright/>
-        </div>
-        <FooterBrand/>
-      </footer>
+      <div>
+        <div ref="theFooterPadding"></div>
+        <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
+          <div className="o-footer__container">
+            {footerType}
+            <FooterCopyright/>
+          </div>
+          <FooterBrand/>
+        </footer>
+      </div>
     );
   }
 }
