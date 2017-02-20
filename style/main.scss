@@ -20,6 +20,10 @@ body {
   height: 100%;
 }
 
+#kat-root {
+  height: 100%;
+}
+
 .kat-footer {
   font-family: $sans-serif;
   position: absolute;
@@ -28,6 +32,7 @@ body {
   left: 0;
 
   &__wrapper {
-    height: 100%;
+    min-height: 100%;
+    position: relative;
   }
 }
