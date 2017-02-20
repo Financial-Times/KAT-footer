@@ -5,10 +5,19 @@ import FooterRow from './../footer-row'; //full o-footer
 import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
 import FooterBrand from './../../components/footer-brand';
+import Delegate from 'ftdomdelegate';
+import viewport from 'o-viewport';
 
 class KatFooterContainer extends Component {
   constructor(props) {
     super(props);
+
+    this.onWindowResize = this.onWindowResize.bind(this);
+
+    viewport.listenTo('resize');
+    this.theDoc = new Delegate();
+    this.theDoc.root(document.body);
+    this.theDoc.on('oViewport.resize', 'body', this.onWindowResize);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -18,8 +27,11 @@ class KatFooterContainer extends Component {
 
   componentDidMount() {
     Footer.init();
+    this.onWindowResize();
+  }
 
-    if (this.refs.theFooterPadding) {
+  onWindowResize() {
+    if (this.refs.theFooter && this.refs.theFooterPadding) {
       this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight}px`;
     }
   }
