@@ -1,5 +1,4 @@
-// import React, { Component, PropTypes } from 'react';
-import React, { Component} from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 class FooterCopyright extends Component {
@@ -10,10 +9,6 @@ class FooterCopyright extends Component {
 
   shoudlComponentUpdate(nextProps, nextState){
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
-  }
-
-  componentDidMount(){
-
   }
 
   render(){
@@ -28,6 +23,10 @@ class FooterCopyright extends Component {
       );
   }
 }
+
+FooterCopyright.propTypes = {
+  footerCopyright: PropTypes.object.isRequired
+};
 
 const mapStateToProps = (store) => {
   return {

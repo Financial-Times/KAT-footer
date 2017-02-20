@@ -2,54 +2,32 @@ import KatFooter from './src';
 import KatFooterContainer from './src/containers/kat-footer';
 import { KatFooterNs } from './src/reducers';
 
-const initKatFooter = () => { 
+const initKatFooter = () => {
 const theOptions = {
   "rootEl": "#root",
   "data": {
     "KatFooterNs": {
-
       "katFooter" : {
         "theme": "theme-light",
+        "footerType" : "short"
       },
-      "externalLink": {
-        "label": "More from the FT Group",
-        "href": "http://ft.com/more-from-ft-group"
-      },
-      "matrix": {
-        "matrix": [
+      "legalLinks": {
+        "links": [
           {
-            "title": "Legal & Privacy",
-            "items": [
-              {
-                "text": "Terms & Conditions",
-                "href": "//www.ft.com/servicestools/help/terms"
-              },
-              {
-                "text": "Privacy",
-                "href": "//www.ft.com/servicestools/help/privacy"
-              },
-              {
-                "text": "Cookies",
-                "href": "//www.ft.com/cookiepolicy"
-              },
-              {
-                "text": "Copyright",
-                "href": "//www.ft.com/servicestools/help/copyright"
-              }
-            ]
+            "href": "http://help.ft.com/help/legal-privacy/terms-conditions/",
+            "label": "Terms & Conditions"
           },
           {
-            "title": "Services",
-            "items": [
-              {
-                "text": "Republishing",
-                "href": "//enterprise.ft.com/en-gb/services/republishing/"
-              },
-              {
-                "text": "Contracts & Tenders",
-                "href": "//www.businessesforsale.com/ft2/notices"
-              }
-            ]
+            "href": "http://help.ft.com/help/legal-privacy/privacy/",
+            "label": "Privacy"
+          },
+          {
+            "href": "http://help.ft.com/help/legal-privacy/cookies/",
+            "label": "Cookies"
+          },
+          {
+            "href":"http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
+            "label": "Copyright"
           }
         ]
       },

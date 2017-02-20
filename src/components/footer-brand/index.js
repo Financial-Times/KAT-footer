@@ -1,19 +1,12 @@
-// import React, {Component, PropTypes} from 'react';
-// import { connect } from 'react-redux';
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 
 class FooterBrand extends Component {
-
   constructor(props){
     super(props);
   }
 
   shouldComponentUpdate(nextProps, nextState){
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
-  }
-
-  componentDidMount(){
-
   }
 
   render(){

@@ -1,6 +1,6 @@
-# kat-footer [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
+# kat-footer
 
-Footer component for KMT app
+Footer component for KAT app
 
 
 ## Building this project
@@ -29,6 +29,11 @@ import { KatFooterNs } from "kat-footer/main";
 //...
 combineReducers(Object.assign({}, parentAppReducers, { KatFooterNs }));
 ```
+* Normal standalone use:
+```js
+rootEl: "#root" // {String|DOM element} - optional - Query string or DOM element inside which the KAT Footer will be placed.
+```
+
 ```js
 // then include and use in a component/container
 import { KatFooterContainer } from "kat-footer/main";
@@ -48,9 +53,9 @@ KatFooter.init(options);
 ###Options:
 * React Redux store data (both for when **Inside** and **Outside** React Redux app):
 ```js
-defaultOptions = {
+defaultFullOptions = {
   "rootEl": "#root",
-  {
+  "data": {
     "KatFooterNs": {
       "externalLink": {
         "label": "More from the FT Group",
@@ -189,7 +194,54 @@ defaultOptions = {
         }
       },
       "katFooter": {
-        "theme": "theme-dark"
+        "theme": "theme-dark",
+         "footerType" : "full"
+      },
+      "helpers": {}
+    }
+  }
+}
+
+const defaultShortOptions = {
+  "rootEl": "#root",
+  "data": {
+    "KatFooterNs": {
+      "katFooter" : {
+        "theme": "theme-light",
+        "footerType" : "short"
+      },
+      "legalLinks": {
+        "links": [
+          {
+            "href": "http://help.ft.com/help/legal-privacy/terms-conditions/",
+            "label": "Terms & Conditions"
+          },
+          {
+            "href": "http://help.ft.com/help/legal-privacy/privacy/",
+            "label": "Privacy"
+          },
+          {
+            "href": "http://help.ft.com/help/legal-privacy/cookies/",
+            "label": "Cookies"
+          },
+          {
+            "href":"http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
+            "label": "Copyright"
+          }
+        ]
+      },
+      "footerCopyright": {
+        "header": "Markets data delayed by at least 15 minutes. © THE FINANCIAL TIMES LTD 2017.",
+        "abbr": {
+          "title": "Financial Times",
+          "abbr": "F T",
+          "text": "and \"Financial Times\" are trademarks of The Financial Times Ltd"
+        },
+        "footer": "The Financial Times and its journalism are subject to a self-regulation regime under the ",
+        "footerLink": {
+          "link": "http://www.ft.com/editorialcode",
+          "text": "FT Editorial Code of Practice"
+        }
       },
       "helpers": {}
     }
@@ -197,24 +249,4 @@ defaultOptions = {
 }
 ```
 
-* Normal standalone use:
-```js
-rootEl: "#root" // {String|DOM element} - optional - Query string or DOM element inside which the KMT Header will be placed.
-```
 
-```js
-// Example
-const options = {
-  rootEl: "#root",
-  data: {
-    KmtHeaderNs: {
-      headerTitle: {
-        label: "KMT",
-        summary: "KNOWLEDGE MANAGER TOOLS"
-      }
-    }
-  }
-};
-
-KmtHeader.init(options);
-```
