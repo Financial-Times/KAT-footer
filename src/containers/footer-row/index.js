@@ -1,8 +1,7 @@
-// import React, { Component, PropTypes } from 'react';
-// import { connect } from 'react-redux';
-import React, { Component} from 'react';
-import FooterMatrix from './../footer-matrix';
-import ExternalLink from './../external-link';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import FooterMatrix from './../../components/footer-matrix';
+import ExternalLink from './../../components/external-link';
 
 class FooterRow extends Component {
 
@@ -15,18 +14,32 @@ class FooterRow extends Component {
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  componentDidMount(){
-
-  }
-
   render(){
     return(
             <div className="o-footer__row">
-              <FooterMatrix/>
-              <ExternalLink/>
-            </div>      
+              <FooterMatrix matrix={this.props.matrix}/>
+              <ExternalLink {...this.props.externalLink} />
+            </div>
       );
   }
 }
 
-export default FooterRow;
+FooterRow.propTypes = {
+  matrix: PropTypes.array.isRequired,
+  externalLink: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    href: PropTypes.string.isRequired
+  }).isRequired
+};
+
+const mapStateToProps = (store) => {
+  return {
+    matrix: store.KatFooterNs.matrix.matrix,
+    externalLink: {
+      label: store.KatFooterNs.externalLink.label,
+      href: store.KatFooterNs.externalLink.href
+    }
+  };
+};
+
+export default connect(mapStateToProps)(FooterRow);

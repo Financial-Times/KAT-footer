@@ -2,7 +2,7 @@ import KatFooter from './src';
 import KatFooterContainer from './src/containers/kat-footer';
 import { KatFooterNs } from './src/reducers';
 
-const initKatFooter = () => { 
+const initKatFooter = () => {
 const theOptions = {
   "rootEl": "#root",
   "data": {

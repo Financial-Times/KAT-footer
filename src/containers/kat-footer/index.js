@@ -1,11 +1,10 @@
-// import React, { Component, PropTypes } from 'react';
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Footer from 'o-footer';
-import FooterRow from './../footer-row'; //full o-footer 
+import FooterRow from './../footer-row'; //full o-footer
 import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
-import FooterBrand from './../footer-brand';
+import FooterBrand from './../../components/footer-brand';
 
 
 class KatFooterContainer extends Component {
@@ -33,22 +32,26 @@ class KatFooterContainer extends Component {
     }
 
     return (
-      <div>
-        <footer className={footerClass} data-o-component="o-footer">
-          <div className="o-footer__container">
-            {footerType}
-            <FooterCopyright/>
-          </div>
-          <FooterBrand/>
-        </footer>
-      </div>
+      <footer className={footerClass} data-o-component="o-footer">
+        <div className="o-footer__container">
+          {footerType}
+          <FooterCopyright/>
+        </div>
+        <FooterBrand/>
+      </footer>
     );
   }
 }
 
+KatFooterContainer.propTypes = {
+  theme: PropTypes.string.isRequired,
+  legalLinks: PropTypes.array,
+  footerType: PropTypes.string.isRequired
+};
+
 const mapStateToProps = (store) => {
   return {
-    theme: store.KatFooterNs.katFooter.theme ,
+    theme: store.KatFooterNs.katFooter.theme,
     legalLinks: store.KatFooterNs.legalLinks.links,
     footerType: store.KatFooterNs.katFooter.footerType
   };

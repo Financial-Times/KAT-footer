@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 class LegalLinks extends Component {
-  
   constructor(props){
     super(props);
   }
@@ -9,7 +8,6 @@ class LegalLinks extends Component {
   shouldComponentUpdate(nextProps, nextState){
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
-
 
   render(){
     if (Array.isArray(this.props.linksData)){
@@ -24,11 +22,15 @@ class LegalLinks extends Component {
               {links}
             </ul>
           </div>
-        );      
+        );
     }
     return null;
   }
 
 }
+
+LegalLinks.propTypes = {
+  linksData: PropTypes.array
+};
 
 export default LegalLinks;

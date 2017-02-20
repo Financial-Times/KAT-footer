@@ -24,9 +24,7 @@ class KatFooter {
 
     ReactDOM.render(
       <Provider store={store}>
-        <div>
-          <KatFooterContainer/>
-        </div>
+        <KatFooterContainer />
       </Provider>,
       this.rootEl);
   };

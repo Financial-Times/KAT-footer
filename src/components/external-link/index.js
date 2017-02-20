@@ -1,19 +1,12 @@
-// import React, { Component, PropTypes} from 'react';
-import React, { Component} from 'react';
-import { connect } from 'react-redux';
+import React, { Component, PropTypes } from 'react';
 
 class ExternalLink extends Component {
-
   constructor(props){
     super(props);
   }
 
   shouldComponentUpdate(nextProps, nextState){
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
-  }
-
-  componentDidUpdate(){
-
   }
 
   render(){
@@ -26,11 +19,9 @@ class ExternalLink extends Component {
 
 }
 
-const mapStateToProps = (store) => {
-  return {
-      label: store.KatFooterNs.externalLink.label,
-      href: store.KatFooterNs.externalLink.href
-    };
+ExternalLink.propTypes = {
+  label: PropTypes.string.isRequired,
+  href: PropTypes.string.isRequired
 };
 
-export default connect(mapStateToProps)(ExternalLink);
+export default ExternalLink;

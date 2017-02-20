@@ -1,10 +1,7 @@
-// import React, { Component, PropTypes } from 'react';
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import MatrixGroup from './../../components/matrix-group';
+import React, { Component, PropTypes } from 'react';
+import MatrixGroup from './../matrix-group';
 
 class FooterMatrix extends Component {
-
   constructor(props){
     super(props);
     this.buildMatrixColumns = this.buildMatrixColumns.bind(this);
@@ -14,15 +11,10 @@ class FooterMatrix extends Component {
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  componentDidMount(){
-
-  }
-
   buildMatrixColumns(props){
     if ( Array.isArray(props.matrix) && (props.matrix.length > 0) ){
-      const matrix = props.matrix;
-      return matrix.map((data, index) => {
-        return <MatrixGroup groupData={data} key={index}/>;
+      return props.matrix.map((data, index) => {
+        return <MatrixGroup groupData={data} key={index} index={index}/>;
       });
     }
     return null;
@@ -37,8 +29,8 @@ class FooterMatrix extends Component {
   }
 }
 
-const mapStateToProps = (store) => {
-  return store.KatFooterNs.matrix;
+FooterMatrix.propTypes = {
+  matrix: PropTypes.array.isRequired
 };
 
-export default connect(mapStateToProps)(FooterMatrix);
+export default FooterMatrix;

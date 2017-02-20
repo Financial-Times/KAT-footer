@@ -1,6 +1,6 @@
-# kat-footer 
+# kat-footer
 
-Footer component for KMT app
+Footer component for KAT app
 
 
 ## Building this project
