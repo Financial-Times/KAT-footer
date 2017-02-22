@@ -28,6 +28,10 @@ const theOptions = {
           {
             "href":"http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
             "label": "Copyright"
+          },
+          {
+            "href": "http://help.ft.com/",
+            "label": "Help"
           }
         ]
       },
