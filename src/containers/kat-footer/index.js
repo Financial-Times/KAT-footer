@@ -32,7 +32,7 @@ class KatFooterContainer extends Component {
 
   onWindowResize() {
     if (this.refs.theFooter && this.refs.theFooterPadding) {
-      this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight}px`;
+      this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight + this.props.footerPaddingTop}px`;
     }
   }
 
@@ -64,14 +64,16 @@ class KatFooterContainer extends Component {
 KatFooterContainer.propTypes = {
   theme: PropTypes.string.isRequired,
   legalLinks: PropTypes.array,
-  footerType: PropTypes.string.isRequired
+  footerType: PropTypes.string.isRequired,
+  footerPaddingTop: PropTypes.number.isRequired
 };
 
 const mapStateToProps = (store) => {
   return {
     theme: store.KatFooterNs.katFooter.theme,
     legalLinks: store.KatFooterNs.legalLinks.links,
-    footerType: store.KatFooterNs.katFooter.footerType
+    footerType: store.KatFooterNs.katFooter.footerType,
+    footerPaddingTop: store.KatFooterNs.katFooter.footerPaddingTop,
   };
 };
 

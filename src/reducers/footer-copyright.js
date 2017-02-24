@@ -5,6 +5,7 @@ const defaultState = {
       abbr: {
         title: "Financial Times",
         abbr: "F T",
+        label: " FT ",
         text: 'and "Financial Times" are trademarks of The Financial Times Ltd'
       },
       footer: 'The Financial Times and its journalism are subject to a self-regulation regime under the ',

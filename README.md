@@ -206,10 +206,6 @@ const defaultShortOptions = {
   "rootEl": "#root",
   "data": {
     "KatFooterNs": {
-      "katFooter" : {
-        "theme": "theme-light",
-        "footerType" : "short"
-      },
       "legalLinks": {
         "links": [
           {
@@ -249,4 +245,9 @@ const defaultShortOptions = {
 }
 ```
 
+You can change the default footer config from .env file.
 
+There are the defaults: 
+FOOTER_THEME="theme-light" / theme-dark
+FOOTER_TYPE="short" / full
+FOOTER_PADDING_TOP="10" 

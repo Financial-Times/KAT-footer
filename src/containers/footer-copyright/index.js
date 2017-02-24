@@ -16,7 +16,7 @@ class FooterCopyright extends Component {
       <div className="o-footer__copyright" role="contentinfo">
         <small>
           {this.props.footerCopyright.header}
-          <abbr title={this.props.footerCopyright.abbr.title} aria-label={this.props.footerCopyright.abbr.abbr}>FT</abbr> {this.props.footerCopyright.abbr.text}.<br></br>
+          <abbr title={this.props.footerCopyright.abbr.title} aria-label={this.props.footerCopyright.abbr.abbr}> {this.props.footerCopyright.abbr.label} </abbr> {this.props.footerCopyright.abbr.text}.<br></br>
           {this.props.footerCopyright.footer} <a href={this.props.footerCopyright.footerLink.link} aria-label="F T Editorial Code of Practice">{this.props.footerCopyright.footerLink.text}</a>
         </small>
       </div>

@@ -35,4 +35,21 @@ body {
     min-height: 100%;
     position: relative;
   }
+
+  .o-footer__legal-links li {
+
+      &::before {
+        padding-left: 4px;
+      }
+      &:first-child::before {
+        padding-left: 0;
+      }
+
+  }
+
+  .o-footer__copyright {
+    abbr {
+      text-decoration: none;
+    }
+  }
 }
