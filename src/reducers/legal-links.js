@@ -1,3 +1,4 @@
+import config from './../../config';
 const defaultState = {
   links: [
     {
@@ -17,7 +18,7 @@ const defaultState = {
       label: "Copyright"
     },
     {
-      href: "#",
+      href: config.FOOTER_HELP_LINK || "http://help.ft.com/",
       label: "Help"
     }
   ]
