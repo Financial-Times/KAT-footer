@@ -37,17 +37,9 @@ body {
   }
 
   .o-footer__legal-links li {
-
       &::before {
-        content: '\2022';
         padding-left: 4px;
-        padding-right: 4px;
       }
-      &:first-child::before {
-        content: '';
-        padding: 0;
-      }
-
   }
 
   .o-footer__copyright {

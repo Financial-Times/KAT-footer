@@ -32,7 +32,7 @@ class KatFooterContainer extends Component {
 
   onWindowResize() {
     if (this.refs.theFooter && this.refs.theFooterPadding) {
-      this.refs.theFooterPadding.style["padding-bottom"] = `${Number(this.refs.theFooter.offsetHeight) + Number(this.props.footerPaddingTop)}px`;
+      this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight + this.props.footerPaddingTop}px`;
     }
   }
 
