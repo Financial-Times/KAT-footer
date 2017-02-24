@@ -4,7 +4,7 @@ import config from './../../config';
 const defaultState = {
   theme : config.FOOTER_THEME,
   footerType: config.FOOTER_TYPE,
-  footerPaddingTop: Number(config.FOOTER_PADDING_TOP)
+  footerPaddingTop: parseInt(config.FOOTER_PADDING_TOP, 10)
 };
 
 const katFooter = (state = defaultState, action={}) => {
