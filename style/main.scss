@@ -37,9 +37,14 @@ body {
   }
 
   .o-footer__legal-links li {
+
       &::before {
         padding-left: 4px;
       }
+      &:first-child::before {
+        padding: 0;
+      }
+
   }
 
   .o-footer__copyright {
