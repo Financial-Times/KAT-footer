@@ -42,6 +42,25 @@ body {
     max-width: 660px;
   }
 
+  &__contact-details {
+    color:rgba(255,255,255,0.90);
+    background-color: #990f3d;
+
+    &-container {
+      background-color: #990f3d;
+      width: 100%;
+    }
+
+    &-item {
+      display: inline-block;
+      padding-right: 24px;
+
+      strong {
+        font-weight: bolder;
+      }
+    }
+  }
+
   .o-footer__legal-links li {
 
       &::before {
