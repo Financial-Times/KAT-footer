@@ -37,7 +37,7 @@ class KatFooterContainer extends Component {
   }
 
   render() {
-    let footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
+    const footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
     let footerType;
     if (this.props.footerType === 'full') {
       footerType = (<FooterRow/>);
