@@ -26,7 +26,7 @@ const initKatFooter = () => {
               "label": "Copyright"
             },
             {
-              "href": "http://help.ft.com/",
+              "href": "http://help.ft.com/help/b2b-support/knowledge-administration-tool/",
               "label": "Help"
             }
           ]
