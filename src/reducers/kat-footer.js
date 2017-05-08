@@ -1,5 +1,5 @@
 const defaultState = {
-  theme : window.FOOTER_THEME || 'theme-light',
+  theme : window.FOOTER_THEME || 'theme-dark',
   footerType: window.FOOTER_TYPE || 'short',
   footerPaddingTop: parseInt(window.FOOTER_PADDING_TOP || 10, 10)
 };
