@@ -32,7 +32,6 @@ const initKatFooter = () => {
           ]
         },
         "footerCopyright": {
-          "header": "Markets data delayed by at least 15 minutes. © THE FINANCIAL TIMES LTD 2017.",
           "abbr": {
             "title": "Financial Times",
             "abbr": "F T",
