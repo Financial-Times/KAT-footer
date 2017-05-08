@@ -38,6 +38,10 @@ body {
     position: relative;
   }
 
+  &__copyright {
+    max-width: 660px;
+  }
+
   .o-footer__legal-links li {
 
       &::before {
