@@ -5,6 +5,7 @@ public
 test
 test2
 vendor
+coverage
 
 # Logs
 logs
