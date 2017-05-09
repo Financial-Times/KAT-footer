@@ -1,17 +1,13 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import FooterContactDetails from './index.js';
-import thunk from 'redux-thunk'
+import thunk from 'redux-thunk';
 
 describe('FooterContactDetails', () => {
-  it ('test', () => {
-    expect(true).to.equal(true);
-  });
-
-  const footerContactDetails = {
+  const testData = {
     intro: 'test intro',
     ukPhoneNumber: 'test uk phone number',
     or: ' or ',
@@ -19,33 +15,22 @@ describe('FooterContactDetails', () => {
     email: 'test email'
   };
 
-  const testReducer = (state = footerContactDetails, action={}) => {
+  const footerContactDetails = (state = testData, action={}) => {
     return state;
   };
 
-  // console.log(testReducer);
-
   const reducers = {
-    testReducer
+    footerContactDetails
   };
 
   const KatFooterNs = combineReducers(reducers);
 
-  // console.log(KatFooterNs);
-
   const KatFooterApp = combineReducers(Object.assign({}, { KatFooterNs }));
 
-  // console.log(KatFooterApp);
-
   const store = createStore(
-    // KatFooterApp,
-    KatFooterNs,
+    KatFooterApp,
     applyMiddleware(thunk)
   );
-
-  console.log(store.getState());
-
-  // console.log(store.getState());
 
   it('renders without crashing', () => {
     shallow(<Provider store={store}>
@@ -53,15 +38,20 @@ describe('FooterContactDetails', () => {
     </Provider>);
   });
 
-  // console.log(wrapper);
-
   describe('component', () => {
-    const wrapper = shallow(<Provider store={store}>
+    const wrapper = mount(<Provider store={store}>
       <FooterContactDetails />
     </Provider>);
 
+    const content = <div className="kat-footer__contact-details">
+      <p className="kat-footer__contact-details-item">{testData.intro}</p>
+      <p className="kat-footer__contact-details-item"><strong>{testData.ukPhoneNumber}</strong>{testData.or}<strong>{testData.usPhoneNumber}</strong></p>
+      <p className="kat-footer__contact-details-item"><strong>{testData.email}</strong></p>
+      <br></br>
+    </div>;
+
     test('has the right content', () => {
-      // [TBD]
+      expect(wrapper.contains(content)).to.equal(true);
     });
   });
 });
