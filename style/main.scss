@@ -20,10 +20,6 @@ body {
   height: 100%;
 }
 
-#kat-root {
-  height: 100%;
-}
-
 .kat-footer {
   font-family: $sans-serif;
   position: absolute;
@@ -43,20 +39,20 @@ body {
   }
 
   &__contact-details {
-    color:rgba(255,255,255,0.90);
+    color: rgba(255, 255, 255, 0.9);
     background-color: #990f3d;
 
     &-container {
       background-color: #990f3d;
     }
+  }
 
-    &-item {
+  &__contact-details-item {
       display: inline-block;
       padding-right: 24px;
 
-      strong {
-        font-weight: bolder;
-      }
+    strong {
+      font-weight: bolder;
     }
   }
 
