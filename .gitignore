@@ -22,3 +22,5 @@ docker-compose.yml
 # configs
 /.env
 /config.js
+
+.sass-lint.yml

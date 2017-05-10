@@ -20,6 +20,8 @@
   "license": "MIT",
   "devDependencies": {
     "@financial-times/n-heroku-tools": "~6.19.4",
+    "@financial-times/n-express": "~16.9.0",
+    "origami-build-tools": "~5.5.3",   
     "babel-cli": "^6.9.0",
     "babel-core": "~6.2.1",
     "babel-loader": "~6.2.0",
