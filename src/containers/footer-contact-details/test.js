@@ -10,7 +10,7 @@ describe('FooterContactDetails', () => {
   const testData = {
     intro: 'test intro',
     ukPhoneNumber: 'test uk phone number',
-    or: ' or ',
+    phoneDelimiter: ' or ',
     usPhoneNumber: 'test us phone number',
     email: 'test email'
   };
@@ -43,10 +43,16 @@ describe('FooterContactDetails', () => {
       <FooterContactDetails />
     </Provider>);
 
-    const content = <div className="kat-footer__contact-details">
-      <p className="kat-footer__contact-details-item">{testData.intro}</p>
-      <p className="kat-footer__contact-details-item"><strong>{testData.ukPhoneNumber}</strong>{testData.or}<strong>{testData.usPhoneNumber}</strong></p>
-      <p className="kat-footer__contact-details-item"><strong>{testData.email}</strong></p>
+    const content =  <div className="kat-footer__contact-container">
+      <div className="kat-footer__contact-item">{testData.intro}</div>
+      <div className="kat-footer__contact-item">
+        <a href={`tel: ${testData.ukPhoneNumber}`}>{testData.ukPhoneNumber}</a>
+        <span>{testData.phoneDelimiter}</span>
+        <a href={`tel: ${testData.usPhoneNumber}`}>{testData.usPhoneNumber}</a>
+      </div>
+      <div className="kat-footer__contact-item">
+        <a href={`mailto: ${testData.email}`}>{testData.email}</a>
+      </div>
       <br></br>
     </div>;
 

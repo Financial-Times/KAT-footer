@@ -12,11 +12,18 @@ class FooterContactDetails extends Component {
   }
 
   render(){
+    const details = this.props.footerContactDetails;
     return(
-      <div className="kat-footer__contact-details">
-        <p className="kat-footer__contact-details-item">{this.props.footerContactDetails.intro}</p>
-        <p className="kat-footer__contact-details-item"><strong>{this.props.footerContactDetails.ukPhoneNumber}</strong>{this.props.footerContactDetails.or}<strong>{this.props.footerContactDetails.usPhoneNumber}</strong></p>
-        <p className="kat-footer__contact-details-item"><strong>{this.props.footerContactDetails.email}</strong></p>
+      <div className="kat-footer__contact-container">
+        <div className="kat-footer__contact-item">{details.intro}</div>
+        <div className="kat-footer__contact-item">
+          <a href={`tel: ${details.ukPhoneNumber}`}>{details.ukPhoneNumber}</a>
+          <span>{details.phoneDelimiter}</span>
+          <a href={`tel: ${details.usPhoneNumber}`}>{details.usPhoneNumber}</a>
+        </div>
+        <div className="kat-footer__contact-item">
+          <a href={`mailto: ${details.email}`}>{details.email}</a>
+        </div>
         <br></br>
       </div>
       );

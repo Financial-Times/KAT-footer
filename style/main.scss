@@ -20,13 +20,16 @@ body {
   height: 100%;
 }
 
+#kat-root {
+  height: 100%;
+}
+
 .kat-footer {
   font-family: $sans-serif;
   position: absolute;
   width: 100%;
   bottom: 0;
   left: 0;
-
   border: 0;
 
   &__wrapper {
@@ -38,21 +41,25 @@ body {
     max-width: 660px;
   }
 
-  &__contact-details {
-    color: rgba(255, 255, 255, 0.9);
-    background-color: #990f3d;
-
-    &-container {
-      background-color: #990f3d;
+  &__contact {
+    &-wrapper {
+      background-color: oColorsGetPaletteColor("claret");
+      padding: 15px 0;
     }
-  }
 
-  &__contact-details-item {
+    &-item {
       display: inline-block;
       padding-right: 24px;
 
-    strong {
-      font-weight: bolder;
+      > a {
+        font-weight: 600;
+        color: oColorsGetPaletteColor("white");
+
+        &:hover,
+        &:focus {
+          color: oColorsGetPaletteColor("grey-tint1");
+        }
+      }
     }
   }
 

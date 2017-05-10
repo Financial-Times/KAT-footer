@@ -51,9 +51,9 @@ class KatFooterContainer extends Component {
       <div>
         <div ref="theFooterPadding"></div>
         <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
-          <div className="kat-footer__contact-details-container">
+          <div className="kat-footer__contact-wrapper">
             <div className="o-footer__container">
-              <FooterContactDetails/>
+              <FooterContactDetails />
             </div>
           </div>
           <div className="o-footer__container">
