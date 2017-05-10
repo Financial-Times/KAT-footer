@@ -16,6 +16,25 @@
   "engines": {
     "node": "^6.2.0"
   },
+  "jest": {
+    "moduleDirectories": ["node_modules", "bower_components"],
+    "moduleNameMapper": {
+      "ftdomdelegate": "<rootDir>/bower_components/ftdomdelegate/lib/index.js",
+      "fticons": "<rootDir>/bower_components/fticons/main.js",
+      "kat-footer": "<rootDir>/bower_components/kat-footer/main.js",
+      "o-assets": "<rootDir>/bower_components/o-assets/main.js",
+      "o-colors": "<rootDir>/bower_components/o-colors/main.js",
+      "o-fonts": "<rootDir>/bower_components/o-fonts/main.js",
+      "o-footer": "<rootDir>/bower_components/o-footer/main.js",
+      "o-grid": "<rootDir>/bower_components/o-grid/main.js",
+      "o-hoverable": "<rootDir>/bower_components/o-hoverable/main.js",
+      "o-icons": "<rootDir>/bower_components/o-icons/main.js",
+      "o-toggle": "<rootDir>/bower_components/o-toggle/main.js",
+      "o-typography": "<rootDir>/bower_components/o-typography/main.js",
+      "o-utils": "<rootDir>/bower_components/o-utils/main.js",
+      "o-viewport": "<rootDir>/bower_components/o-viewport/main.js"
+    }
+  },
   "author": "razvan.boldeau@ft.com",
   "license": "MIT",
   "devDependencies": {
