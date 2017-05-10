@@ -70,7 +70,7 @@ describe('KatFooterContainer', () => {
     applyMiddleware(thunk)
   );
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     shallow(<Provider store={store}>
       <KatFooterContainer />
     </Provider>);
@@ -80,5 +80,29 @@ describe('KatFooterContainer', () => {
     const wrapper = mount(<Provider store={store}>
       <KatFooterContainer />
     </Provider>);
+
+    const footerClass = "kat-footer o-footer o-footer--theme-dark"+store.theme;
+    const footerType = "type";
+
+    test('has necessary elements', () => {
+      expect(wrapper.contains(<div ref="theFooterPadding"></div>)).to.equal(true);
+      // expect(wrapper.contains(<footer data-o-component="o-footer" ref="theFooter"></footer>)).to.equal(true);
+    });
   });
 });
+
+// <div>
+//   <div ref="theFooterPadding"></div>
+//   <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
+//     <div className="kat-footer__contact-wrapper">
+//       <div className="o-footer__container">
+//         <FooterContactDetails />
+//       </div>
+//     </div>
+//     <div className="o-footer__container">
+//       {footerType}
+//       <FooterCopyright/>
+//     </div>
+//     <FooterBrand/>
+//   </footer>
+// </div>
