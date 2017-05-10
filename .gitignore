@@ -5,6 +5,7 @@ public
 test
 test2
 vendor
+coverage
 
 # Logs
 logs
@@ -21,3 +22,5 @@ docker-compose.yml
 # configs
 /.env
 /config.js
+
+.sass-lint.yml

@@ -20,6 +20,7 @@ body {
   height: 100%;
 }
 
+// scss-lint:disable IdSelector
 #kat-root {
   height: 100%;
 }
@@ -30,10 +31,38 @@ body {
   width: 100%;
   bottom: 0;
   left: 0;
+  border: 0;
 
   &__wrapper {
     min-height: 100%;
     position: relative;
+  }
+
+  &__copyright {
+    max-width: 660px;
+  }
+
+  &__contact {
+    &-wrapper {
+      background-color: oColorsGetPaletteColor("claret");
+      padding: 15px 0;
+    }
+
+    &-item {
+      display: inline-block;
+      padding-right: 24px;
+
+      // scss-lint:disable NestingDepth
+      > a {
+        font-weight: 600;
+        color: oColorsGetPaletteColor("white");
+
+        &:hover,
+        &:focus {
+          color: oColorsGetPaletteColor("grey-tint1");
+        }
+      }
+    }
   }
 
   .o-footer__legal-links li {

@@ -4,6 +4,7 @@ import Footer from 'o-footer';
 import FooterRow from './../footer-row'; //full o-footer
 import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
+import FooterContactDetails from './../footer-contact-details';
 import FooterBrand from './../../components/footer-brand';
 import Delegate from 'ftdomdelegate';
 import viewport from 'o-viewport';
@@ -37,7 +38,7 @@ class KatFooterContainer extends Component {
   }
 
   render() {
-    let footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
+    const footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
     let footerType;
     if (this.props.footerType === 'full') {
       footerType = (<FooterRow/>);
@@ -50,6 +51,11 @@ class KatFooterContainer extends Component {
       <div>
         <div ref="theFooterPadding"></div>
         <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
+          <div className="kat-footer__contact-wrapper">
+            <div className="o-footer__container">
+              <FooterContactDetails />
+            </div>
+          </div>
           <div className="o-footer__container">
             {footerType}
             <FooterCopyright/>

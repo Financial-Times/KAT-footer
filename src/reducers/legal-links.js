@@ -17,7 +17,7 @@ const defaultState = {
       label: "Copyright"
     },
     {
-      href: window.FOOTER_HELP_LINK || "http://help.ft.com/",
+      href: window.FOOTER_HELP_LINK || "http://help.ft.com/help/b2b-support/knowledge-administration-tool/",
       label: "Help"
     }
   ]

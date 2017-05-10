@@ -26,13 +26,12 @@ const initKatFooter = () => {
               "label": "Copyright"
             },
             {
-              "href": "http://help.ft.com/",
+              "href": "http://help.ft.com/help/b2b-support/knowledge-administration-tool/",
               "label": "Help"
             }
           ]
         },
         "footerCopyright": {
-          "header": "Markets data delayed by at least 15 minutes. © THE FINANCIAL TIMES LTD 2017.",
           "abbr": {
             "title": "Financial Times",
             "abbr": "F T",
