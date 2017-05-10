@@ -20,6 +20,7 @@ body {
   height: 100%;
 }
 
+// scss-lint:disable IdSelector
 #kat-root {
   height: 100%;
 }
@@ -51,6 +52,7 @@ body {
       display: inline-block;
       padding-right: 24px;
 
+      // scss-lint:disable NestingDepth
       > a {
         font-weight: 600;
         color: oColorsGetPaletteColor("white");

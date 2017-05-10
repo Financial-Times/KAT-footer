@@ -43,7 +43,7 @@ describe('FooterContactDetails', () => {
       <FooterContactDetails />
     </Provider>);
 
-    const content =  <div className="kat-footer__contact-container">
+    const content = <div className="kat-footer__contact-container">
       <div className="kat-footer__contact-item">{testData.intro}</div>
       <div className="kat-footer__contact-item">
         <a href={`tel: ${testData.ukPhoneNumber}`}>{testData.ukPhoneNumber}</a>
