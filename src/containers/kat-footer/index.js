@@ -58,9 +58,9 @@ class KatFooterContainer extends Component {
           </div>
           <div className="o-footer__container">
             {footerType}
-            <FooterCopyright/>
+            <FooterCopyright />
           </div>
-          <FooterBrand/>
+          <FooterBrand />
         </footer>
       </div>
     );
