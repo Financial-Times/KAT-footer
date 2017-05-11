@@ -252,3 +252,6 @@ FOOTER_THEME="theme-light" / theme-dark
 FOOTER_TYPE="short" / full
 FOOTER_PADDING_TOP="10"
 FOOTER_HELP_LINK="http://help.ft.com/"
+
+##### To run tests
+`$ npm test` to run existing tests, and `$ npm test -- --coverage` to see the coverage of tested files.
