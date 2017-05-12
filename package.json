@@ -33,7 +33,10 @@
       "o-utils": "<rootDir>/bower_components/o-utils/main.js",
       "o-viewport": "<rootDir>/bower_components/o-viewport/main.js"
     },
-    "coveragePathIgnorePatterns": ["/node_modules/", "/bower_components/"]
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/bower_components/"
+    ]
   },
   "author": "razvan.boldeau@ft.com",
   "license": "MIT",
@@ -53,6 +56,7 @@
     "chai-jquery": "~2.0.0",
     "enzyme": "~1.4.1",
     "jest": "^20.0.0",
+    "jest-enzyme": "^3.1.0",
     "jsdom": "~8.1.0",
     "mocha": "~2.4.5",
     "origami-build-tools": "~5.5.3",
