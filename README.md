@@ -248,7 +248,7 @@ const defaultShortOptions = {
 You can change the default footer config from .env file.
 
 There are the defaults:
-FOOTER_THEME="theme-light" / theme-dark
+FOOTER_THEME="theme-light" / "theme-dark"
 FOOTER_TYPE="short" / full
 FOOTER_PADDING_TOP="10"
 FOOTER_HELP_LINK="http://help.ft.com/"
