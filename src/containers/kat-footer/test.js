@@ -1,9 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import thunk from 'redux-thunk';
+
 
 import KatFooterContainer from './index.js';
 
@@ -82,6 +82,13 @@ describe('KatFooterContainer', () => {
     </Provider>);
   });
 
+  test('matches snapshot', () => {
+    const wrapper = shallow(<Provider store={store}>
+      <KatFooterContainer />
+    </Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
+  });
+
   describe('component', () => {
     const wrapper = mount(<Provider store={store}>
       <KatFooterContainer />
@@ -105,7 +112,7 @@ describe('KatFooterContainer', () => {
     </div>;
 
     test('has content', () => {
-      expect(wrapper.contains(content)).to.equal(true);
+      expect(wrapper.contains(content)).toEqual(true);
     });
   });
 });

@@ -1,6 +1,5 @@
 import React from 'react';
-import { expect } from 'chai';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import ExternalLink from './index.js';
 
 describe('ExternalLink', () => {
@@ -8,6 +7,11 @@ describe('ExternalLink', () => {
     label: 'test test',
     href: 'test test'
   };
+
+  test('matches snapshot', () => {
+    const wrapper = shallow(<ExternalLink label={testData.label} href={testData.href}/>);
+    expect(wrapper.debug()).toMatchSnapshot();
+  });
 
   describe('component', () => {
     const wrapper = mount(<ExternalLink label={testData.label} href={testData.href}/>);
@@ -17,7 +21,7 @@ describe('ExternalLink', () => {
     </h6>;
 
     test('has the right content', () => {
-      expect(wrapper.contains(content)).to.equal(true);
+      expect(wrapper.contains(content)).toEqual(true);
     });
   });
 });

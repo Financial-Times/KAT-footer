@@ -1,7 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { expect } from 'chai';
 import { mount, shallow } from 'enzyme';
 import FooterContactDetails from './index.js';
 import thunk from 'redux-thunk';
@@ -32,10 +31,18 @@ describe('FooterContactDetails', () => {
     applyMiddleware(thunk)
   );
 
-  it('renders without crashing', () => {
+  test('renders without crashing', () => {
     shallow(<Provider store={store}>
       <FooterContactDetails />
     </Provider>);
+  });
+
+
+  test('matches snapshot', () => {
+    const wrapper = shallow(<Provider store={store}>
+      <FooterContactDetails />
+    </Provider>);
+    expect(wrapper.debug()).toMatchSnapshot();
   });
 
   describe('component', () => {
@@ -57,7 +64,7 @@ describe('FooterContactDetails', () => {
     </div>;
 
     test('has the right content', () => {
-      expect(wrapper.contains(content)).to.equal(true);
+      expect(wrapper.contains(content)).toEqual(true);
     });
   });
 });
