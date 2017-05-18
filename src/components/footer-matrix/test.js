@@ -23,6 +23,10 @@ describe('FooterMatrix', () => {
     ]
   };
 
+  const nullMatrixTestData = {
+    matrix: []
+  };
+
   describe('component', () => {
     const wrapper = mount(<FooterMatrix matrix={matrixTestData.matrix}/>);
 
@@ -40,5 +44,19 @@ describe('FooterMatrix', () => {
   test('matches snapshot', () => {
     const wrapper = shallow(<FooterMatrix matrix={matrixTestData.matrix}/>);
     expect(wrapper.debug()).toMatchSnapshot();
+  });
+
+  describe('return null if there is no links', () => {
+    const wrapper = mount(<FooterMatrix matrix={nullMatrixTestData.marix} />);
+    const content =
+    <nav className="o-footer__matrix" role="navigation" aria-label="Useful links">
+      {null}
+    </nav>;
+
+    console.log(wrapper.html());
+
+    test('has the right content', () => {
+      expect(wrapper.contains(content)).toEqual(true);
+    });
   });
 });
