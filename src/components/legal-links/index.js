@@ -11,7 +11,7 @@ class LegalLinks extends Component {
 
   render(){
     if (Array.isArray(this.props.linksData)){
-      let links = [];
+      const links = [];
       this.props.linksData.forEach((link, index)=>{
         links.push(<li key={index}><a href={link.href}>{link.label}</a></li>);
       });
