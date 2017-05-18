@@ -104,10 +104,10 @@ describe('KatFooterContainer', () => {
           </div>
         </div>
         <div className="o-footer__container">
-          <LegalLinks linksData={testData.legalLinks.links}/>
+          <LegalLinks linksData={testData.legalLinks.links} />
           <FooterCopyright />
         </div>
-        <FooterBrand/>
+        <FooterBrand />
       </footer>
     </div>;
 
