@@ -17,7 +17,7 @@ class FooterRow extends Component {
   render(){
     return(
             <div className="o-footer__row">
-              <FooterMatrix matrix={this.props.matrix}/>
+              <FooterMatrix matrix={this.props.matrix} />
               <ExternalLink {...this.props.externalLink} />
             </div>
       );
