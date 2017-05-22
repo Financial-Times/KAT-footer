@@ -12,7 +12,7 @@ $ git clone git@github.com:Financial-Times/kat-footer.git
 $ npm install
 $ bower install
 ```
-Then you can go to `http://local.ft.com:5000/` in your browser and see the footer module running locally on your machine.
+Then you can run `$ npm start` and go to `http://local.ft.com:5000/` in your browser to see the footer module running locally on your machine.
 
 To be able to manage footer main settings you can create an `.env` file in the root directory with the following variables:
 ```
