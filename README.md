@@ -28,7 +28,14 @@ FOOTER_HELP_LINK="http://help.ft.com/help/b2b-support/knowledge-administration-t
 #### Important notes
 If you see an error like `Error: Node Sass does not yet support your current environment: OS X 64-bit with Unsupported runtime` you will probably need to run `$ npm rebuild node-sass` to overcome this. In addition you might need to update `origami-build-tools`.
 
-## Running the tests
+## Testing
+
+We are using [Jest](https://facebook.github.io/jest/) for testing React components, and [Enzyme](http://airbnb.io/enzyme/) for rendering components inside our tests.
+
+Tests for React components should be saved as `test.js` inside the folder for that component.
+
+### Running the tests
+
  - To run a one-time test: `$ npm test`;
  - To run tests and watch for changes: `$ npm run testWatch`;
  - `$ npm test -- --coverage` to see the coverage of tested files.
