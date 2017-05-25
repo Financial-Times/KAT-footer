@@ -62,10 +62,8 @@ describe('FooterRow', () => {
   };
 
   const externalLinkTestData = {
-    externalLink: {
-      label: 'Test Test',
-      href: 'testtest'
-    }
+    label: 'Test Test',
+    href: 'testtest'
   };
 
   const externalLink = (state = externalLinkTestData, action={}) => {
