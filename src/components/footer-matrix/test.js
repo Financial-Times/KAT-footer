@@ -47,7 +47,7 @@ describe('FooterMatrix', () => {
   });
 
   describe('return null if there is no links', () => {
-    const wrapper = mount(<FooterMatrix matrix={nullMatrixTestData.marix} />);
+    const wrapper = mount(<FooterMatrix matrix={nullMatrixTestData.matrix} />);
     const content =
     <nav className="o-footer__matrix" role="navigation" aria-label="Useful links">
       {null}
