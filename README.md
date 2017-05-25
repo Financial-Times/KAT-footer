@@ -105,4 +105,4 @@ This is the data structure:
 ### Circle CI
 
 All commits are being automatically checked by Circle CI, that is used during Heroku production build.
-Make sure you monitor that all the Circle CI tests pass, and that you have all the necessary linter helpers installed.
+Make sure you monitor that all the Circle CI tests pass, and that you have all the necessary linter helpers installed

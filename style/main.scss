@@ -51,6 +51,7 @@ body {
     &-item {
       display: inline-block;
       padding-right: 24px;
+      color: oColorsGetPaletteColor("white");
 
       // scss-lint:disable NestingDepth
       > a {
