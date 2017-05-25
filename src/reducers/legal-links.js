@@ -13,7 +13,7 @@ const defaultState = {
       label: "Cookies"
     },
     {
-      href:"http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
+      href: "http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
       label: "Copyright"
     },
     {

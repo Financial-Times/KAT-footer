@@ -41,10 +41,10 @@ class KatFooterContainer extends Component {
     const footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
     let footerType;
     if (this.props.footerType === 'full') {
-      footerType = (<FooterRow/>);
+      footerType = (<FooterRow />);
     }
     else {
-      footerType = (<LegalLinks linksData={this.props.legalLinks}/>);
+      footerType = (<LegalLinks linksData={this.props.legalLinks} />);
     }
 
     return (
@@ -58,9 +58,9 @@ class KatFooterContainer extends Component {
           </div>
           <div className="o-footer__container">
             {footerType}
-            <FooterCopyright/>
+            <FooterCopyright />
           </div>
-          <FooterBrand/>
+          <FooterBrand />
         </footer>
       </div>
     );

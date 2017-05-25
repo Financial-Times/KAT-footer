@@ -11,30 +11,56 @@
     "prestart": "./node_modules/.bin/gulp",
     "start": "node server.js",
     "heroku-postbuild": "./node_modules/.bin/bower install",
-    "test": "jest src/*"
+    "test": "jest src/*",
+    "testWatch": "jest src/* --watch"
   },
   "engines": {
     "node": "^6.2.0"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "ftdomdelegate": "<rootDir>/bower_components/ftdomdelegate/lib/index.js",
+      "fticons": "<rootDir>/bower_components/fticons/main.js",
+      "kat-footer": "<rootDir>/bower_components/kat-footer/main.js",
+      "o-assets": "<rootDir>/bower_components/o-assets/main.js",
+      "o-colors": "<rootDir>/bower_components/o-colors/main.js",
+      "o-fonts": "<rootDir>/bower_components/o-fonts/main.js",
+      "o-footer": "<rootDir>/bower_components/o-footer/main.js",
+      "o-grid": "<rootDir>/bower_components/o-grid/main.js",
+      "o-hoverable": "<rootDir>/bower_components/o-hoverable/main.js",
+      "o-icons": "<rootDir>/bower_components/o-icons/main.js",
+      "o-toggle": "<rootDir>/bower_components/o-toggle/main.js",
+      "o-typography": "<rootDir>/bower_components/o-typography/main.js",
+      "o-utils": "<rootDir>/bower_components/o-utils/main.js",
+      "o-viewport": "<rootDir>/bower_components/o-viewport/main.js"
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/bower_components/"
+    ]
+  },
   "author": "razvan.boldeau@ft.com",
   "license": "MIT",
   "devDependencies": {
-    "@financial-times/n-heroku-tools": "~6.19.4",
     "@financial-times/n-express": "~16.9.0",
-    "origami-build-tools": "~5.5.3",   
+    "@financial-times/n-heroku-tools": "~6.19.4",
     "babel-cli": "^6.9.0",
     "babel-core": "~6.2.1",
     "babel-loader": "~6.2.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-es2015": "^6.1.18",
     "babel-preset-react": "^6.1.18",
     "babel-register": "~6.9.0",
+    "bower": "^1.7.9",
     "chai": "~3.5.0",
     "chai-http": "~3.0.0",
     "chai-jquery": "~2.0.0",
     "enzyme": "~1.4.1",
     "jest": "^20.0.0",
+    "jest-enzyme": "^3.1.0",
     "jsdom": "~8.1.0",
     "mocha": "~2.4.5",
+    "origami-build-tools": "~5.5.3",
     "react-addons-test-utils": "~0.14.7",
     "redux-mock-store": "^1.2.3",
     "redux-thunk": "^2.1.2"
