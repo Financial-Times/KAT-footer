@@ -53,8 +53,6 @@ describe('FooterMatrix', () => {
       {null}
     </nav>;
 
-    console.log(wrapper.html());
-
     test('has the right content', () => {
       expect(wrapper.contains(content)).toEqual(true);
     });
