@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 
 import FooterRow from './index.js';
 import FooterMatrix from './../../components/footer-matrix';
-// import ExternalLink from './../../components/external-link';
+import ExternalLink from './../../components/external-link';
 
 describe('FooterRow', () => {
   const matrixTestData = {
@@ -62,10 +62,8 @@ describe('FooterRow', () => {
   };
 
   const externalLinkTestData = {
-    externalLink: {
-      label: 'Test Test',
-      href: 'testtest'
-    }
+    label: 'Test Test',
+    href: 'testtest'
   };
 
   const externalLink = (state = externalLinkTestData, action={}) => {
@@ -110,11 +108,21 @@ describe('FooterRow', () => {
     });
 
     test('ExternalLink container', () => {
-      // TBD
+      const content = <ExternalLink {...externalLinkTestData} />;
+      expect(wrapper.contains(content)).toEqual(true);
     });
 
     test('div of o-footer__row class', () => {
       expect(wrapper.find('.o-footer__row').length).toEqual(1);
+    });
+
+    test('has the right content', () => {
+      const content =
+      <div className="o-footer__row">
+        <FooterMatrix matrix={store.getState().KatFooterNs.matrix.matrix} />
+        <ExternalLink {...externalLinkTestData} />
+      </div>;
+      expect(wrapper.contains(content)).toEqual(true);
     });
   });
 });

@@ -17,7 +17,7 @@ describe('LegalLinks', () => {
   };
 
   const testNull = {
-    links: 0
+    links: []
   };
 
   describe('component', () => {
@@ -39,13 +39,13 @@ describe('LegalLinks', () => {
       </ul>
     </div>;
 
+    test('has the right content', () => {
+      expect(wrapper.contains(content)).toEqual(true);
+    });
+
     test('matches snapshot', () => {
       const wrapper = shallow(<LegalLinks linksData={testData.links} />);
       expect(wrapper.debug()).toMatchSnapshot();
-    });
-
-    test('has the right content', () => {
-      expect(wrapper.contains(content)).toEqual(true);
     });
   });
 
