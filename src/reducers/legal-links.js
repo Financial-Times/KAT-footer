@@ -5,6 +5,10 @@ const defaultState = {
       label: "Terms & Conditions"
     },
     {
+      "href": "https://help.ft.com/help/legal/slavery-statement/",
+      "label": "Slavery Statement"
+    },
+    {
       href: "http://help.ft.com/help/legal-privacy/privacy/",
       label: "Privacy"
     },
