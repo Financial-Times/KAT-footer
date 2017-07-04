@@ -1,18 +1,7 @@
 import { combineReducers } from 'redux';
-import externalLink from './external-link';
-import matrix from './matrix';
-import footerCopyright from './footer-copyright';
-import footerContactDetails from './footer-contact-details';
-import katFooter from './kat-footer';
-import legalLinks from './legal-links';
 
 const mainReducers = {
-  externalLink,
-  matrix,
-  footerCopyright,
-  footerContactDetails,
-  katFooter,
-  legalLinks
+	reducer: (state = {}) => state
 };
 
 // combine the app reducers
