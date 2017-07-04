@@ -22,6 +22,15 @@ class KatFooter {
 
     const store = configureStore(options.data);
 
+    // const footerProps = {
+    //   theme: options.data.KatFooterNs.katFooter.theme,
+    //   legalLinks: options.data.KatFooterNs.legalLinks.links,
+    //   footerType: options.data.KatFooterNs.katFooter.footerType,
+    //   footerPaddingTop: options.data.KatFooterNs.katFooter.footerPaddingTop,
+    //   footerContactDetails: options.data.KatFooterNs.footerContactDetails,
+    //   footerCopyright: options.data.KatFooterNs.footerCopyright
+    // };
+
     ReactDOM.render(
       <Provider store={store}>
         <KatFooterContainer />

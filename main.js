@@ -7,6 +7,11 @@ const initKatFooter = () => {
     "rootEl": "#root",
     "data": {
       "KatFooterNs": {
+        "katFooter": {
+          "theme": 'theme-dark',
+          "footerType": 'short',
+          "footerPaddingTop": 10
+        },
         "legalLinks": {
           "links": [
             {
@@ -34,6 +39,13 @@ const initKatFooter = () => {
               "label": "Help"
             }
           ]
+        },
+        "footerContactDetails": {
+          "intro": "Any questions? Contact Us",
+          "ukPhoneNumber": "+44 (0)20 7873 4001",
+          "phoneDelimiter": " or ",
+          "usPhoneNumber": "+1 877 843 3399",
+          "email": "customersuccess@ft.com"
         },
         "footerCopyright": {
           "abbr": {
