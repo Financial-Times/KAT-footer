@@ -13,7 +13,7 @@
     "heroku-postbuild": "./node_modules/.bin/bower install",
     "test": "jest src/*",
     "testWatch": "jest src/* --watch",
-    "postinstall": "rm -rf dist && mkdir dist && babel -d ./dist ./main.js && babel -d ./dist/src ./src"
+    "postinstall": "rm -rf dist && mkdir dist && babel -d ./dist ./main.js --presets=es2015,react && babel -d ./dist/src ./src --presets=es2015,react"
   },
   "engines": {
     "node": "^6.2.0"
