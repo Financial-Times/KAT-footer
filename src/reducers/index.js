@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import helpers from './helpers';
 import externalLink from './external-link';
 import matrix from './matrix';
 import footerCopyright from './footer-copyright';
@@ -13,8 +12,7 @@ const mainReducers = {
   footerCopyright,
   footerContactDetails,
   katFooter,
-  legalLinks,
-  helpers
+  legalLinks
 };
 
 // combine the app reducers

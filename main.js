@@ -47,8 +47,7 @@ const initKatFooter = () => {
             "link": "http://www.ft.com/editorialcode",
             "text": "FT Editorial Code of Practice"
           }
-        },
-        "helpers": {}
+        }
       }
     }
   };
