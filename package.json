@@ -2,7 +2,7 @@
   "name": "kat-footer",
   "version": "0.0.1",
   "description": "",
-  "main": "server.js",
+  "main": "dist/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Financial-Times/kat-footer.git"
@@ -12,7 +12,8 @@
     "start": "node server.js",
     "heroku-postbuild": "./node_modules/.bin/bower install",
     "test": "jest src/*",
-    "testWatch": "jest src/* --watch"
+    "testWatch": "jest src/* --watch",
+    "postinstall": "rm -rf dist && mkdir dist && babel -d ./dist ./main.js && babel -d ./dist/src ./src"
   },
   "engines": {
     "node": "^6.2.0"
