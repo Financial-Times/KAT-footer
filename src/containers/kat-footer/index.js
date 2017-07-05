@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Footer from 'o-footer';
+import Footer from './../../../bower_components/o-footer/main.js';
 import FooterRow from './../footer-row'; //full o-footer
 import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
@@ -15,7 +15,7 @@ class KatFooterContainer extends Component {
 
     this.onWindowResize = this.onWindowResize.bind(this);
 
-    viewport.listenTo('resize');
+    viewport.listenTo('resize'); // TODO: Figure out if we really need this
     this.theDoc = new Delegate();
     this.theDoc.root(document.body);
     this.theDoc.on('oViewport.resize', 'body', this.onWindowResize);
