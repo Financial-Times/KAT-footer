@@ -11,3 +11,7 @@ test:
 	make verify
 	make unit-test
 	# make a11y
+
+build:
+	./node_modules/.bin/gulp
+	make build-n-makefile
