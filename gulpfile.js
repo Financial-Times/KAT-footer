@@ -8,6 +8,13 @@ const size = require('gulp-size');
 const livereload = require('gulp-livereload');
 let appServer;
 
+const verifyFn = function () {
+  return obt.verify(gulp, {
+    scssLintPath: './.scss-lint.yml',
+    esLintPath: './.eslintrc'
+  });
+};
+
 gulp.task('build', ['global-config'], function () {
   return obt.build(gulp, {
     js: './main.js',
@@ -24,6 +31,9 @@ gulp.task('build', ['global-config'], function () {
 gulp.task('install', function () {
   return obt.install();
 });
+
+gulp.task('verify', verifyFn);
+gulp.task('dev-verify', ['img', 'watch'], verifyFn);
 
 gulp.task('test', function () {
   return obt.test.npmTest(gulp);

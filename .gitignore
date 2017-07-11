@@ -25,6 +25,4 @@ docker-compose.yml
 
 .sass-lint.yml
 
-.eslintrc.js
-.editorconfig
 .pa11yci.js
