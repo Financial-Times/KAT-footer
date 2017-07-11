@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LegalLinks component matches snapshot 1`] = `
-"<div>
-<ul className=\\"o-footer__legal-links\\">
+'<div>
+<ul className=\\'o-footer__legal-links\\'>
 <li>
-<a href=\\"test\\">
+<a href=\\'test\\'>
 test
 </a>
 </li>
 <li>
-<a href=\\"test\\">
+<a href=\\'test\\'>
 test
 </a>
 </li>
 </ul>
-</div>"
+</div>'
 `;

@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
@@ -65,7 +67,7 @@ describe('KatFooterContainer', () => {
     }
   };
 
-  const KatFooterNs = (state = testData, action={}) => {
+  const KatFooterNs = (state = testData) => {
     return state;
   };
 
@@ -96,14 +98,14 @@ describe('KatFooterContainer', () => {
 
     const content =
     <div>
-      <div ref="theFooterPadding"></div>
-      <footer className="kat-footer o-footer o-footer--test" data-o-component="o-footer" ref="theFooter">
-        <div className="kat-footer__contact-wrapper">
-          <div className="o-footer__container">
+      <div ref='theFooterPadding'></div>
+      <footer className='kat-footer o-footer o-footer--test' data-o-component='o-footer' ref='theFooter'>
+        <div className='kat-footer__contact-wrapper'>
+          <div className='o-footer__container'>
             <FooterContactDetails />
           </div>
         </div>
-        <div className="o-footer__container">
+        <div className='o-footer__container'>
           <LegalLinks linksData={testData.legalLinks.links} />
           <FooterCopyright />
         </div>

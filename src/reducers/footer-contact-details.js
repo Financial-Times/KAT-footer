@@ -8,7 +8,7 @@ const defaultState = {
       email: 'customersuccess@ft.com'
 };
 
-const footerContactDetails = (state = defaultState, action={}) => {
+const footerContactDetails = (state = defaultState) => {
   return state;
 };
 

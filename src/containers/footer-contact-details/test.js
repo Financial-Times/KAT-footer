@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
@@ -14,7 +16,7 @@ describe('FooterContactDetails', () => {
     email: 'test email'
   };
 
-  const footerContactDetails = (state = testData, action={}) => {
+  const footerContactDetails = (state = testData) => {
     return state;
   };
 
@@ -50,14 +52,14 @@ describe('FooterContactDetails', () => {
       <FooterContactDetails />
     </Provider>);
 
-    const content = <div className="kat-footer__contact-container">
-      <div className="kat-footer__contact-item">{testData.intro}</div>
-      <div className="kat-footer__contact-item">
+    const content = <div className='kat-footer__contact-container'>
+      <div className='kat-footer__contact-item'>{testData.intro}</div>
+      <div className='kat-footer__contact-item'>
         <a href={`tel: ${testData.ukPhoneNumber}`}>{testData.ukPhoneNumber}</a>
         <span>{testData.phoneDelimiter}</span>
         <a href={`tel: ${testData.usPhoneNumber}`}>{testData.usPhoneNumber}</a>
       </div>
-      <div className="kat-footer__contact-item">
+      <div className='kat-footer__contact-item'>
         <a href={`mailto: ${testData.email}`}>{testData.email}</a>
       </div>
       <br></br>

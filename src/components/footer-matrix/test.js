@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import FooterMatrix from './index.js';
@@ -7,17 +9,17 @@ describe('FooterMatrix', () => {
   const matrixTestData = {
     matrix: [
       {
-        "title": "Test",
-        "items": [
-          { "text": "test", "href": "test" },
-          { "text": "test", "href": "test" }
+        'title': 'Test',
+        'items': [
+          { 'text': 'test', 'href': 'test' },
+          { 'text': 'test', 'href': 'test' }
         ]
       },
       {
-        "title": "Test",
-        "items": [
-          { "text": "test", "href": "test" },
-          { "text": "test", "href": "test" }
+        'title': 'Test',
+        'items': [
+          { 'text': 'test', 'href': 'test' },
+          { 'text': 'test', 'href': 'test' }
         ]
       }
     ]
@@ -31,7 +33,7 @@ describe('FooterMatrix', () => {
     const wrapper = mount(<FooterMatrix matrix={matrixTestData.matrix}/>);
 
     const content =
-    <nav className="o-footer__matrix" role="navigation" aria-label="Useful links">
+    <nav className='o-footer__matrix' role='navigation' aria-label='Useful links'>
       <MatrixGroup groupData={matrixTestData.matrix[0]} key={0} index={0}/>
       <MatrixGroup groupData={matrixTestData.matrix[1]} key={1} index={1}/>
     </nav>;
@@ -49,7 +51,7 @@ describe('FooterMatrix', () => {
   describe('return null if there is no links', () => {
     const wrapper = mount(<FooterMatrix matrix={nullMatrixTestData.matrix} />);
     const content =
-    <nav className="o-footer__matrix" role="navigation" aria-label="Useful links">
+    <nav className='o-footer__matrix' role='navigation' aria-label='Useful links'>
       {null}
     </nav>;
 

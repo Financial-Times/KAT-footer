@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import LegalLinks from './index.js';
@@ -6,12 +8,12 @@ describe('LegalLinks', () => {
   const testData = {
     links: [
       {
-        href: "test",
-        label: "test"
+        href: 'test',
+        label: 'test'
       },
       {
-        href: "test",
-        label: "test"
+        href: 'test',
+        label: 'test'
       }
     ]
   };
@@ -25,7 +27,7 @@ describe('LegalLinks', () => {
 
     const content =
     <div>
-      <ul className="o-footer__legal-links">
+      <ul className='o-footer__legal-links'>
         <li key={0}>
           <a href={testData.links[0].href}>
             {testData.links[0].label}

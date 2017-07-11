@@ -10,7 +10,7 @@ import Delegate from 'ftdomdelegate';
 import viewport from 'o-viewport';
 
 class KatFooterContainer extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
 
     this.onWindowResize = this.onWindowResize.bind(this);
@@ -21,24 +21,24 @@ class KatFooterContainer extends Component {
     this.theDoc.on('oViewport.resize', 'body', this.onWindowResize);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate (nextProps) {
     // only render if the props (state) have changed
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  componentDidMount() {
+  componentDidMount () {
     Footer.init();
     this.onWindowResize();
   }
 
-  onWindowResize() {
+  onWindowResize () {
     if (this.refs.theFooter && this.refs.theFooterPadding) {
-      this.refs.theFooterPadding.style["padding-bottom"] = `${this.refs.theFooter.offsetHeight + this.props.footerPaddingTop}px`;
+      this.refs.theFooterPadding.style['padding-bottom'] = `${this.refs.theFooter.offsetHeight + this.props.footerPaddingTop}px`;
     }
   }
 
-  render() {
-    const footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
+  render () {
+    const footerClass = 'kat-footer o-footer o-footer--' + this.props.theme;
     let footerType;
     if (this.props.footerType === 'full') {
       footerType = (<FooterRow />);
@@ -49,14 +49,14 @@ class KatFooterContainer extends Component {
 
     return (
       <div>
-        <div ref="theFooterPadding"></div>
-        <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
-          <div className="kat-footer__contact-wrapper">
-            <div className="o-footer__container">
+        <div ref='theFooterPadding'></div>
+        <footer className={footerClass} data-o-component='o-footer' ref='theFooter'>
+          <div className='kat-footer__contact-wrapper'>
+            <div className='o-footer__container'>
               <FooterContactDetails />
             </div>
           </div>
-          <div className="o-footer__container">
+          <div className='o-footer__container'>
             {footerType}
             <FooterCopyright />
           </div>
