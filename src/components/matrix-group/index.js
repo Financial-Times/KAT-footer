@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class MatrixGroup extends Component {
   constructor(props){
@@ -10,8 +11,8 @@ class MatrixGroup extends Component {
   }
 
   render(){
-    let items = this.props.groupData.items;
-    let html = [];
+    const items = this.props.groupData.items;
+    const html = [];
 
     if ( Array.isArray(items) && (items.length > 0) ){
       items.forEach( (link, index) => {

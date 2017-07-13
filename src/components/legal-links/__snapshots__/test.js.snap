@@ -2,17 +2,17 @@
 
 exports[`LegalLinks component matches snapshot 1`] = `
 "<div>
-<ul className=\\"o-footer__legal-links\\">
-<li>
-<a href=\\"test\\">
-test
-</a>
-</li>
-<li>
-<a href=\\"test\\">
-test
-</a>
-</li>
-</ul>
+  <ul className=\\"o-footer__legal-links\\">
+    <li>
+      <a href=\\"test\\">
+        test
+      </a>
+    </li>
+    <li>
+      <a href=\\"test\\">
+        test
+      </a>
+    </li>
+  </ul>
 </div>"
 `;

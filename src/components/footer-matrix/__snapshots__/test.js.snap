@@ -2,7 +2,7 @@
 
 exports[`FooterMatrix matches snapshot 1`] = `
 "<nav className=\\"o-footer__matrix\\" role=\\"navigation\\" aria-label=\\"Useful links\\">
-<Component groupData={{...}} index={0} />
-<Component groupData={{...}} index={1} />
+  <MatrixGroup groupData={{...}} index={0} />
+  <MatrixGroup groupData={{...}} index={1} />
 </nav>"
 `;
