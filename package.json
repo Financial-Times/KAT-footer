@@ -68,7 +68,6 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "~6.1.18",
-    "bower": "~1.7.9",
     "dotenv": "~2.0.0",
     "es6-promise": "~3.2.1",
     "eslint-plugin-react": "~5.2.2",
