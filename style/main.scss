@@ -1,37 +1,15 @@
 $o-footer-is-silent: false;
 $o-fonts-is-silent: false;
-$o-typography-is-silent: false;
+
 @import '../bower_components/o-colors/main';
 @import '../bower_components/o-fonts/main';
 @import '../bower_components/o-footer/main';
-@import '../bower_components/o-typography/main';
 @include oColorsSetColor('claret-inverse', #4f1828);
+
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
-
-html {
-  @include oColorsFor(page, background);
-  height: 100%;
-}
-
-body {
-  // Remove space around the document
-  @include oColorsFor(page, background);
-  margin: 0;
-  height: 100%;
-}
-
-// scss-lint:disable IdSelector
-#kat-root {
-  height: 100%;
-}
 
 .kat-footer {
   font-family: $sans-serif;
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  border: 0;
 
   &__wrapper {
     min-height: 100%;
