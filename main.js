@@ -64,10 +64,10 @@ const initKatFooter = () => {
     }
   };
   KatFooter.init(theOptions);
-  document.removeEventListener('kat.DOMContentLoaded', initKatFooter);
+  // document.removeEventListener('kat.DOMContentLoaded', initKatFooter);
 };
 
-document.addEventListener('kat.DOMContentLoaded', initKatFooter);
+// document.addEventListener('kat.DOMContentLoaded', initKatFooter);
 
 export {KatFooterContainer, KatFooterNs};
 export default KatFooter;
