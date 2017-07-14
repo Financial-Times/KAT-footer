@@ -4,4 +4,4 @@ machine:
 
 dependencies:
   override:
-    - npm prune && npm install
+    - npm prune && make install
