@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Footer from './../../../bower_components/o-footer';
+import Footer from './../../../bower_components/o-footer/main.js';
 import FooterRow from './../footer-row'; //full o-footer
 import LegalLinks from './../../components/legal-links'; //short o-footer
 import FooterCopyright from './../footer-copyright';
