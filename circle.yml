@@ -4,4 +4,4 @@ machine:
 
 dependencies:
   override:
-    - npm prune && make install
+    - npm prune && npm install && bower install
