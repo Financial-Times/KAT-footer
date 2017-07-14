@@ -17,12 +17,12 @@ class FooterContactDetails extends Component {
       <div className="kat-footer__contact-container">
         <div className="kat-footer__contact-item">{details.intro}</div>
         <div className="kat-footer__contact-item">
-          <a href={`tel: ${details.ukPhoneNumber}`}>{details.ukPhoneNumber}</a>
+          <a data-trackable="contact-phone-uk" href={`tel: ${details.ukPhoneNumber}`}>{details.ukPhoneNumber}</a>
           <span>{details.phoneDelimiter}</span>
-          <a href={`tel: ${details.usPhoneNumber}`}>{details.usPhoneNumber}</a>
+          <a data-trackable="contact-phone-us" href={`tel: ${details.usPhoneNumber}`}>{details.usPhoneNumber}</a>
         </div>
         <div className="kat-footer__contact-item">
-          <a href={`mailto: ${details.email}`}>{details.email}</a>
+          <a data-trackable="contact-email" href={`mailto: ${details.email}`}>{details.email}</a>
         </div>
         <br></br>
       </div>
