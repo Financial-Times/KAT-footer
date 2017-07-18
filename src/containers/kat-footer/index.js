@@ -8,13 +8,33 @@ import FooterContactDetails from './../footer-contact-details';
 import FooterBrand from './../../components/footer-brand';
 
 class KatFooterContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.onWindowResize = this.onWindowResize.bind(this);
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     // only render if the props (state) have changed
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
+  componentDidMount() {
+    window.addEventListener('resize', this.onWindowResize);
+    this.onWindowResize();
+  }
+
+  onWindowResize() {
+    const theFooter = this.refs.theFooter;
+    const theFooterPadding = this.refs.theFooterPadding;
+
+    if (theFooter && theFooterPadding) {
+      theFooterPadding.style["padding-bottom"] = `${theFooter.offsetHeight + this.props.footerPaddingTop}px`;
+    }
+  }
+
   render() {
-    const footerClass = "kat-footer o-footer o-footer--" + this.props.theme;
+    const footerClass = `kat-footer o-footer o-footer--${this.props.theme}`;
     let footerType;
     if (this.props.footerType === 'full') {
       footerType = (<FooterRow />);
@@ -25,7 +45,8 @@ class KatFooterContainer extends Component {
 
     return (
       <div>
-        <footer className={footerClass} data-o-component="o-footer">
+        <div ref="theFooterPadding"></div>
+        <footer className={footerClass} data-o-component="o-footer" ref="theFooter">
           <div className="kat-footer__contact-wrapper">
             <div className="o-footer__container">
               <FooterContactDetails />

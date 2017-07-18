@@ -4,7 +4,6 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { mount, shallow } from 'enzyme';
 import thunk from 'redux-thunk';
 
-
 import KatFooterContainer from './index.js';
 
 import LegalLinks from './../../components/legal-links';
@@ -96,7 +95,8 @@ describe('KatFooterContainer', () => {
 
     const content =
     <div>
-      <footer className="kat-footer o-footer o-footer--test" data-o-component="o-footer" ref="theFooter">
+      <div></div>
+      <footer className="kat-footer o-footer o-footer--test" data-o-component="o-footer">
         <div className="kat-footer__contact-wrapper">
           <div className="o-footer__container">
             <FooterContactDetails />
