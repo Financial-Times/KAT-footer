@@ -99,7 +99,7 @@ describe('KatFooterContainer', () => {
     const content =
     <div>
       <div ref='theFooterPadding'></div>
-      <footer className='kat-footer o-footer o-footer--test' data-o-component='o-footer' ref='theFooter'>
+      <footer className='kat-footer o-footer o-footer--test' data-o-component='o-footer' data-trackable='kat-footer' ref='theFooter'>
         <div className='kat-footer__contact-wrapper'>
           <div className='o-footer__container'>
             <FooterContactDetails />
