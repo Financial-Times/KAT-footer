@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import MatrixGroup from './index.js';
@@ -26,7 +28,7 @@ describe('MatrixGroup', () => {
     });
 
     test('has matrix title', () => {
-      const content = <h6 className="o-footer__matrix-title">
+      const content = <h6 className='o-footer__matrix-title'>
         {data.title}
       </h6>;
       expect(wrapper.contains(content)).toEqual(true);
@@ -45,7 +47,7 @@ describe('MatrixGroup', () => {
     });
 
     test('has matrix link', () => {
-      const content = <a className="o-footer__matrix-link" href={link1.href} key={0}>
+      const content = <a className='o-footer__matrix-link' href={link1.href} key={0}>
         {link1.text}
       </a>;
       expect(wrapper.contains(content)).toEqual(true);

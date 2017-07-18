@@ -2,38 +2,38 @@ const defaultState = {
   links: [
     {
       'data-trackable': 'terms-and-conditions',
-      href: "http://help.ft.com/help/legal-privacy/terms-conditions/",
-      label: "Terms & Conditions"
+      href: 'http://help.ft.com/help/legal-privacy/terms-conditions/',
+      label: 'Terms & Conditions'
     },
     {
       'data-trackable': 'slavery-statement',
-      "href": "https://help.ft.com/help/legal/slavery-statement/",
-      "label": "Slavery Statement"
+      'href': 'https://help.ft.com/help/legal/slavery-statement/',
+      'label': 'Slavery Statement'
     },
     {
       'data-trackable': 'privacy',
-      href: "http://help.ft.com/help/legal-privacy/privacy/",
-      label: "Privacy"
+      href: 'http://help.ft.com/help/legal-privacy/privacy/',
+      label: 'Privacy'
     },
     {
       'data-trackable': 'cookies',
-      href: "http://help.ft.com/help/legal-privacy/cookies/",
-      label: "Cookies"
+      href: 'http://help.ft.com/help/legal-privacy/cookies/',
+      label: 'Cookies'
     },
     {
       'data-trackable': 'copyright',
-      href: "http://help.ft.com/help/legal-privacy/copyright/copyright-policy/",
-      label: "Copyright"
+      href: 'http://help.ft.com/help/legal-privacy/copyright/copyright-policy/',
+      label: 'Copyright'
     },
     {
       'data-trackable': 'help',
-      href: window.FOOTER_HELP_LINK || "http://help.ft.com/help/b2b-support/knowledge-administration-tool/",
-      label: "Help"
+      href: window.FOOTER_HELP_LINK || 'http://help.ft.com/help/b2b-support/knowledge-administration-tool/',
+      label: 'Help'
     }
   ]
 };
 
-const legalLinks = (state = defaultState, action={} ) => {
+const legalLinks = (state = defaultState) => {
   return state;
 };
 

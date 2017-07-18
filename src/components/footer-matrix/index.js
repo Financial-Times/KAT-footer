@@ -2,16 +2,16 @@ import React, { Component, PropTypes } from 'react';
 import MatrixGroup from './../matrix-group';
 
 class FooterMatrix extends Component {
-  constructor(props){
+  constructor (props) {
     super(props);
     this.buildMatrixColumns = this.buildMatrixColumns.bind(this);
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate (nextProps) {
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  buildMatrixColumns(props){
+  buildMatrixColumns (props) {
     if ( Array.isArray(props.matrix) && (props.matrix.length > 0) ){
       return props.matrix.map((data, index) => {
         return <MatrixGroup groupData={data} key={index} index={index}/>;
@@ -20,9 +20,9 @@ class FooterMatrix extends Component {
     return null;
   }
 
-  render(){
+  render () {
     return(
-      <nav className="o-footer__matrix" role="navigation" aria-label="Useful links">
+      <nav className='o-footer__matrix' role='navigation' aria-label='Useful links'>
         { this.buildMatrixColumns(this.props) }
       </nav>
       );

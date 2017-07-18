@@ -5,18 +5,18 @@ import ExternalLink from './../../components/external-link';
 
 class FooterRow extends Component {
 
-  constructor(props){
+  constructor (props) {
     super(props);
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate (nextProps) {
     // only render if the props (state) have changed
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  render(){
+  render () {
     return(
-            <div className="o-footer__row">
+            <div className='o-footer__row'>
               <FooterMatrix matrix={this.props.matrix} />
               <ExternalLink {...this.props.externalLink} />
             </div>

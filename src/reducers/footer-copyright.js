@@ -2,10 +2,10 @@
 
 const defaultState = {
       abbr: {
-        title: "Financial Times",
-        abbr: "F T",
-        label: " FT ",
-        text: 'and "Financial Times" are trademarks of The Financial Times Ltd'
+        title: 'Financial Times',
+        abbr: 'F T',
+        label: ' FT ',
+        text: 'and \'Financial Times\' are trademarks of The Financial Times Ltd'
       },
       footer: 'The Financial Times and its journalism are subject to a self-regulation regime under the ',
       footerLink: {
@@ -14,7 +14,7 @@ const defaultState = {
       }
 };
 
-const footerCopyright = (state = defaultState, action={}) => {
+const footerCopyright = (state = defaultState) => {
   return state;
 };
 

@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { mount, shallow } from 'enzyme';
 import ExternalLink from './index.js';
@@ -16,8 +18,8 @@ describe('ExternalLink', () => {
   describe('component', () => {
     const wrapper = mount(<ExternalLink label={testData.label} href={testData.href}/>);
 
-    const content = <h6 className="o-footer__external-link o-footer__matrix-title">
-      <a className="o-footer__more-from-ft o-footer__matrix-title" href={testData.href}>{testData.label}</a>
+    const content = <h6 className='o-footer__external-link o-footer__matrix-title'>
+      <a className='o-footer__more-from-ft o-footer__matrix-title' href={testData.href}>{testData.label}</a>
     </h6>;
 
     test('has the right content', () => {

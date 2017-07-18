@@ -5,7 +5,7 @@ const defaultState = {
   href: 'http://ft.com/more-from-ft-group'
 };
 
-const externalLink = (state = defaultState, action = {}) => {
+const externalLink = (state = defaultState) => {
   return state;
 };
 

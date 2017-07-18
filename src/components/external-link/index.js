@@ -1,18 +1,18 @@
 import React, { Component, PropTypes } from 'react';
 
 class ExternalLink extends Component {
-  constructor(props){
+  constructor (props) {
     super(props);
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate (nextProps) {
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  render(){
+  render () {
     return(
-        <h6 className="o-footer__external-link o-footer__matrix-title">
-          <a className="o-footer__more-from-ft o-footer__matrix-title" href={this.props.href}>{this.props.label}</a>
+        <h6 className='o-footer__external-link o-footer__matrix-title'>
+          <a className='o-footer__more-from-ft o-footer__matrix-title' href={this.props.href}>{this.props.label}</a>
         </h6>
       );
   }

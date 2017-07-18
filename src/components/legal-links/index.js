@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 
 class LegalLinks extends Component {
-  constructor(props){
+  constructor (props) {
     super(props);
   }
 
-  shouldComponentUpdate(nextProps, nextState){
+  shouldComponentUpdate (nextProps) {
     return JSON.stringify(nextProps) !== JSON.stringify(this.props);
   }
 
-  render(){
+  render () {
     if (Array.isArray(this.props.linksData)){
       const links = [];
       this.props.linksData.forEach((link, index)=>{
@@ -18,7 +18,7 @@ class LegalLinks extends Component {
 
       return(
           <div>
-            <ul className="o-footer__legal-links">
+            <ul className='o-footer__legal-links'>
               {links}
             </ul>
           </div>
