@@ -1,6 +1,8 @@
-# kat-footer [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
+# kat-footer v2 [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
 
 Footer component for KAT.
+
+*PLEASE NOTE:* This is v2 of the footer and is only for use with the newer, server-side rendered KAt apps like `kat-users` and `kat-groups`. For the older client-side rendered app, please use v1 of the Kat Footer.
 
 KAT (Knowledge & administration tools) is an ft.com application created for Financial Times B2B clients.
 
