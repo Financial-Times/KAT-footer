@@ -57,7 +57,6 @@ const defaultFooterState = {
 };
 
 function KatFooterNs(state = {}) {
-	console.log(Object.assign({}, defaultFooterState, state));
 	return Object.assign({}, defaultFooterState, state);
 };
 
