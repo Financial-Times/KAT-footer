@@ -2,7 +2,6 @@ require('dotenv').config({silent: true});
 const gulp = require('gulp');
 const obt = require('origami-build-tools');
 const nodemon = require('gulp-nodemon');
-const exec = require('child_process').exec;
 const imagemin = require('gulp-imagemin');
 const size = require('gulp-size');
 const livereload = require('gulp-livereload');
@@ -15,7 +14,7 @@ const verifyFn = function() {
   });
 };
 
-gulp.task('build', ['global-config'], function() {
+gulp.task('build', function() {
   return obt.build(gulp, {
     js: './src/index.js',
     sass: './style/main.scss',
@@ -66,10 +65,6 @@ gulp.task('restart-server', function() {
 
 gulp.task('refresh-page', ['build', 'build-page'], function() {
   livereload.changed("src/index.js");
-});
-
-gulp.task('global-config', function() {
-  exec('node generate-config.js');
 });
 
 gulp.task('watch', ['serve'], function() {
