@@ -58,6 +58,9 @@ V1
 $ bower install --S kat-footer
 ```
 #### Usage
+
+For the footer to sit at the bottom of the page/viewport (whichever is tallest), please make sure that the main `<div>` that wraps your page has a class of `kat-root`.
+
 ##### Load the CSS:
 ```scss
 @import '../bower_components/kat-footer/main';
