@@ -1,10 +1,25 @@
-# kat-footer v2 [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
+# kat-footer v2 [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer/tree/v2.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
 
 Footer component for KAT.
 
 KAT (Knowledge & administration tools) is an ft.com application created for Financial Times B2B clients.
 
-**PLEASE NOTE:** This is v2 of the footer and is only for use with the newer, server-side rendered KAT apps like `kat-users` and `kat-groups`. For the older client-side rendered app, please use v1 of the Kat Footer.
+## Important Notes for v2
+This is **v2** of the footer and is only for use with the newer, server-side rendered KAT apps like `kat-users` and `kat-groups`. For the older client-side rendered apps, please use v1 of the KAT Footer, which is taken from the master branch.
+
+### Branching, Pull Requests and Merging
+We are using the **v2** branch as the base for any releases for v2 of KAT Footer. Therefore, if you need to make a change to v2 of the KAT Footer, please use the **v2** branch as the base for any new branches you create.
+
+When you come to create a Pull Request, please make sure that you select **v2** as the base branch that you want to merge into.
+
+### The following KAT components are currently using v2 of `kat-footer`:
+ - [kat-groups](https://github.com/Financial-Times/kat-groups)
+ - [kat-users](https://github.com/Financial-Times/kat-users)
+
+### The following KAT components are currently using v1 of `kat-footer`:
+ - [kat-overview](https://github.com/Financial-Times/kat-overview)
+ - [kat-myft](https://github.com/Financial-Times/kat-myft)
+ - [kat-usage](https://github.com/Financial-Times/kat-usage)
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -16,7 +31,7 @@ $ bower install
 ```
 Then you can run `$ npm start` and go to `http://local.ft.com:5000/` in your browser to see the footer module running locally on your machine.
 
-#### Important notes
+#### Troubleshooting installation
 If you see an error like `Error: Node Sass does not yet support your current environment: OS X 64-bit with Unsupported runtime` you will probably need to run `$ npm rebuild node-sass` to overcome this. In addition you might need to update `origami-build-tools`.
 
 ## Testing
@@ -39,17 +54,6 @@ If you want to update connected components with the latest footer version, you n
 1. Create a new repository release on GitHub. Please follow naming convention of previous releases.
 2. Go to `bower.json` file of the component you want to update, and change `"kat-footer"` dependency version to the [newly released one](https://github.com/Financial-Times/kat-footer/releases).
 3. Run `$ bower install` in the component repository.
-
-The following KAT components are currently using `kat-footer`:
-
-V2
- - [kat-groups](https://github.com/Financial-Times/kat-groups)
- - [kat-users](https://github.com/Financial-Times/kat-users)
-
-V1
- - [kat-overview](https://github.com/Financial-Times/kat-overview)
- - [kat-myft](https://github.com/Financial-Times/kat-myft)
- - [kat-usage](https://github.com/Financial-Times/kat-usage)
 
 ### How to use the component
 
