@@ -8,11 +8,13 @@ $o-fonts-is-silent: false;
 
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
+// Add this class to your main page wrapper
 .kat-root {
   min-height: 100%;
   position: relative;
 }
 
+// The footer styling
 .kat-footer {
   bottom: 0;
   font-family: $sans-serif;
