@@ -8,6 +8,13 @@ $o-fonts-is-silent: false;
 
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
+// Add this class to your main page wrapper
+.kat-root {
+  min-height: 100%;
+  position: relative;
+}
+
+// The footer styling
 .kat-footer {
   bottom: 0;
   font-family: $sans-serif;
@@ -32,11 +39,6 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
   }
 }
 
-.kat-footer__wrapper {
-  min-height: 100%;
-  position: relative;
-}
-
 .kat-footer__contact-wrapper {
   background-color: oColorsGetPaletteColor("claret");
   padding: 15px 0;
@@ -47,7 +49,6 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
   display: inline-block;
   padding-right: 24px;
 
-  // scss-lint:disable NestingDepth
   > a {
     font-weight: 600;
     color: oColorsGetPaletteColor("white");

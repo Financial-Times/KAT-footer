@@ -2,9 +2,9 @@
 
 Footer component for KAT.
 
-*PLEASE NOTE:* This is v2 of the footer and is only for use with the newer, server-side rendered KAt apps like `kat-users` and `kat-groups`. For the older client-side rendered app, please use v1 of the Kat Footer.
-
 KAT (Knowledge & administration tools) is an ft.com application created for Financial Times B2B clients.
+
+**PLEASE NOTE:** This is v2 of the footer and is only for use with the newer, server-side rendered KAT apps like `kat-users` and `kat-groups`. For the older client-side rendered app, please use v1 of the Kat Footer.
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -15,17 +15,6 @@ $ npm install
 $ bower install
 ```
 Then you can run `$ npm start` and go to `http://local.ft.com:5000/` in your browser to see the footer module running locally on your machine.
-
-To be able to manage footer main settings you can create an `.env` file in the root directory with the following variables:
-```
-NODE_ENV=development
-PORT=5000
-
-FOOTER_THEME="theme-dark"
-FOOTER_TYPE="short"
-FOOTER_PADDING_TOP="10"
-FOOTER_HELP_LINK="http://help.ft.com/help/b2b-support/knowledge-administration-tool/"
-```
 
 #### Important notes
 If you see an error like `Error: Node Sass does not yet support your current environment: OS X 64-bit with Unsupported runtime` you will probably need to run `$ npm rebuild node-sass` to overcome this. In addition you might need to update `origami-build-tools`.
@@ -52,9 +41,15 @@ If you want to update connected components with the latest footer version, you n
 3. Run `$ bower install` in the component repository.
 
 The following KAT components are currently using `kat-footer`:
- - [kmt-overview](https://github.com/Financial-Times/kmt-overview)
- - [kmt-myft](https://github.com/Financial-Times/kmt-myft)
- - [kat-usage-report](https://github.com/Financial-Times/kat-usage-report)
+
+V2
+ - [kat-groups](https://github.com/Financial-Times/kat-groups)
+ - [kat-users](https://github.com/Financial-Times/kat-users)
+
+V1
+ - [kat-overview](https://github.com/Financial-Times/kat-overview)
+ - [kat-myft](https://github.com/Financial-Times/kat-myft)
+ - [kat-usage](https://github.com/Financial-Times/kat-usage)
 
 ### How to use the component
 
@@ -63,6 +58,9 @@ The following KAT components are currently using `kat-footer`:
 $ bower install --S kat-footer
 ```
 #### Usage
+
+For the footer to sit at the bottom of the page/viewport (whichever is tallest), please make sure that the main `<div>` that wraps your page has a class of `kat-root`.
+
 ##### Load the CSS:
 ```scss
 @import '../bower_components/kat-footer/main';
@@ -78,19 +76,10 @@ combineReducers(Object.assign({}, parentAppReducers, { KatFooterNs }));
 ```
 Normal standalone use
 ```js
-rootEl: "#root" // {String|DOM element} - optional - Query string or DOM element inside which the KAT Footer will be placed.
-// then include and use in a component/container
-import { KatFooterContainer } from "kat-footer/main";
+// Include and use in a component/container
+import KatFooterContainer from "kat-footer";
 //...
 <KatFooterContainer />;
-```
-
-**Outside** React Redux app (normal standalone use)
-```js
-// include and use in a component/container
-import KatFooter from "kat-footer/main";
-//...
-KatFooter.init(options);
 ```
 
 ## Other important information

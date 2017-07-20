@@ -60,7 +60,6 @@ describe('FooterContactDetails', () => {
       <div className="kat-footer__contact-item">
         <a href={`mailto: ${testData.email}`}>{testData.email}</a>
       </div>
-      <br></br>
     </div>;
 
     test('has the right content', () => {
