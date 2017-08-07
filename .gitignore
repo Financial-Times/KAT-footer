@@ -25,3 +25,6 @@ docker-compose.yml
 /config.js
 
 .sass-lint.yml
+
+.pa11yci.js
+package-lock.json
