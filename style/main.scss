@@ -1,9 +1,9 @@
 $o-footer-is-silent: false;
 $o-fonts-is-silent: false;
 
-@import '../bower_components/o-colors/main';
-@import '../bower_components/o-fonts/main';
-@import '../bower_components/o-footer/main';
+@import 'o-colors/main';
+@import 'o-fonts/main';
+@import 'o-footer/main';
 @include oColorsSetColor('claret-inverse', #4f1828);
 
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
