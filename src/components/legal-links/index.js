@@ -10,7 +10,7 @@ class LegalLinks extends Component {
 		if (Array.isArray(this.props.linksData)){
 			const links = [];
 			this.props.linksData.forEach((link, index)=>{
-				links.push(<li key={index}><a href={link.href}>{link.label}</a></li>);
+				links.push(<li key={index}><a href={link.href} data-trackable={link["data-trackable"]}>{link.label}</a></li>);
 			});
 
 			return(
