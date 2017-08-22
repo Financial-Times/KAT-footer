@@ -8,10 +8,13 @@ class FooterCopyright extends Component {
 	}
 
 	render(){
+		const footerCopyrightData = this.props.footerCopyright;
+		const footerCopyrightAbbr = footerCopyrightData.abbr;
+		const footerLink = footerCopyrightData.footerLink;
 		return(
 			<div className="o-footer__copyright kat-footer__copyright" role="contentinfo">
 				<small>
-					<abbr title={this.props.footerCopyright.abbr.title} aria-label={this.props.footerCopyright.abbr.abbr}> {this.props.footerCopyright.abbr.label} </abbr> {this.props.footerCopyright.abbr.text}. {this.props.footerCopyright.footer} <a href={this.props.footerCopyright.footerLink.link} aria-label="F T Editorial Code of Practice">{this.props.footerCopyright.footerLink.text}</a>
+					<abbr title={footerCopyrightAbbr.title} aria-label={footerCopyrightAbbr.abbr}> {footerCopyrightAbbr.label} </abbr> {footerCopyrightAbbr.text}. {footerCopyrightData.footer} <a href={footerLink.link} data-trackable="ft-editorial-code-of-practice" aria-label="F T Editorial Code of Practice">{footerLink.text}</a>
 				</small>
 			</div>
 		);
