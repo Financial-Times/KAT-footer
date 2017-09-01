@@ -7,12 +7,6 @@ const size = require('gulp-size');
 const livereload = require('gulp-livereload');
 let appServer;
 
-const verifyFn = function() {
-  return obt.verify(gulp, {
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc'
-  });
-};
 
 gulp.task('build', function() {
   return obt.build(gulp, {
@@ -21,8 +15,6 @@ gulp.task('build', function() {
     buildJs: 'bundle.js',
     buildCss: 'kat-footer.css',
     buildFolder: 'public',
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc',
     env: process.env.NODE_ENV
   });
 });
@@ -32,7 +24,6 @@ gulp.task('build-page', function() {
     sass: './style/page.scss',
     buildCss: 'page.css',
     buildFolder: 'public',
-    scssLintPath: './.scss-lint.yml',
     env: process.env.NODE_ENV
   });
 });
@@ -40,9 +31,6 @@ gulp.task('build-page', function() {
 gulp.task('install', function() {
   return obt.install();
 });
-
-gulp.task('verify', verifyFn);
-gulp.task('dev-verify', ['img', 'watch'], verifyFn);
 
 gulp.task('test', function() {
   return obt.test.npmTest(gulp);
