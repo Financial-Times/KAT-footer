@@ -41,7 +41,7 @@ gulp.task('serve', ['dev-add-livereload', 'build', 'build-page'], function(){
     'script': 'server.js',
     'verbose': true,
     'watch': false,
-    'ignore': ["*.*"]
+    'ignore': ['*.*']
   }).on('restart', function () {
     console.log('>>>>>>> nodemon app is restarting <<<<<<<<');
   });
@@ -52,7 +52,7 @@ gulp.task('restart-server', function() {
 });
 
 gulp.task('refresh-page', ['build', 'build-page'], function() {
-  livereload.changed("src/index.js");
+  livereload.changed('src/index.js');
 });
 
 gulp.task('watch', ['serve'], function() {
@@ -69,7 +69,7 @@ gulp.task('img', function () {
       svgoPlugins: []
     }))
     .pipe(size({ showFiles: true, title: 'images compressed:' }))
-    .pipe(gulp.dest("./public/images"));
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('dev-add-livereload', function() {
