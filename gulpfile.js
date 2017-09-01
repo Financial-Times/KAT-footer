@@ -77,4 +77,4 @@ gulp.task('dev-add-livereload', function() {
 });
 
 gulp.task('default', ['build', 'build-page', 'img']);
-gulp.task('dev', ['dev-verify']);
+gulp.task('dev');
