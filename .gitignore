@@ -28,3 +28,6 @@ docker-compose.yml
 
 .pa11yci.js
 package-lock.json
+
+.editorconfig
+.eslintrc.js
