@@ -7,12 +7,6 @@ const size = require('gulp-size');
 const livereload = require('gulp-livereload');
 let appServer;
 
-const verifyFn = function() {
-  return obt.verify(gulp, {
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc'
-  });
-};
 
 gulp.task('build', function() {
   return obt.build(gulp, {
@@ -21,8 +15,6 @@ gulp.task('build', function() {
     buildJs: 'bundle.js',
     buildCss: 'kat-footer.css',
     buildFolder: 'public',
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc',
     env: process.env.NODE_ENV
   });
 });
@@ -32,7 +24,6 @@ gulp.task('build-page', function() {
     sass: './style/page.scss',
     buildCss: 'page.css',
     buildFolder: 'public',
-    scssLintPath: './.scss-lint.yml',
     env: process.env.NODE_ENV
   });
 });
@@ -40,9 +31,6 @@ gulp.task('build-page', function() {
 gulp.task('install', function() {
   return obt.install();
 });
-
-gulp.task('verify', verifyFn);
-gulp.task('dev-verify', ['img', 'watch'], verifyFn);
 
 gulp.task('test', function() {
   return obt.test.npmTest(gulp);
@@ -53,7 +41,7 @@ gulp.task('serve', ['dev-add-livereload', 'build', 'build-page'], function(){
     'script': 'server.js',
     'verbose': true,
     'watch': false,
-    'ignore': ["*.*"]
+    'ignore': ['*.*']
   }).on('restart', function () {
     console.log('>>>>>>> nodemon app is restarting <<<<<<<<');
   });
@@ -64,7 +52,7 @@ gulp.task('restart-server', function() {
 });
 
 gulp.task('refresh-page', ['build', 'build-page'], function() {
-  livereload.changed("src/index.js");
+  livereload.changed('src/index.js');
 });
 
 gulp.task('watch', ['serve'], function() {
@@ -81,7 +69,7 @@ gulp.task('img', function () {
       svgoPlugins: []
     }))
     .pipe(size({ showFiles: true, title: 'images compressed:' }))
-    .pipe(gulp.dest("./public/images"));
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('dev-add-livereload', function() {
@@ -89,4 +77,4 @@ gulp.task('dev-add-livereload', function() {
 });
 
 gulp.task('default', ['build', 'build-page', 'img']);
-gulp.task('dev', ['dev-verify']);
+gulp.task('dev');

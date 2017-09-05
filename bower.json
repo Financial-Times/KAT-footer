@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "o-footer": "^6.0.1"
+    "n-ui": "^6.14.0"
   }
 }
