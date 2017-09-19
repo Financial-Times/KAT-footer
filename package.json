@@ -10,8 +10,6 @@
   "scripts": {
     "start": "gulp serve",
     "heroku-postbuild": "./node_modules/.bin/bower install",
-    "test": "jest dist/src/*",
-    "testWatch": "jest dist/src/* --watch",
     "postinstall": "rm -rf dist && mkdir dist && babel -d ./dist ./main.js --presets=es2015,react && babel -d ./dist/src ./src --presets=es2015,react",
     "precommit": "make verify && node_modules/.bin/secret-squirrel",
     "prepush": "make unit-test && make verify -j3",
