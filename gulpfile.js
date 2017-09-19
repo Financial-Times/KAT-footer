@@ -28,7 +28,7 @@ gulp.task('build-page', function() {
   });
 });
 
-gulp.task('install', function() {
+gulp.task('install', function () {
   return obt.install();
 });
 
@@ -43,11 +43,12 @@ gulp.task('serve', ['dev-add-livereload', 'build', 'build-page'], function(){
     'watch': false,
     'ignore': ['*.*']
   }).on('restart', function () {
+    /*eslint no-console: ['error', { allow: ['warn', 'log'] }] */
     console.log('>>>>>>> nodemon app is restarting <<<<<<<<');
   });
 });
 
-gulp.task('restart-server', function() {
+gulp.task('restart-server', function () {
   appServer.restart();
 });
 
@@ -55,7 +56,7 @@ gulp.task('refresh-page', ['build', 'build-page'], function() {
   livereload.changed('src/index.js');
 });
 
-gulp.task('watch', ['serve'], function() {
+gulp.task('watch', ['serve'], function () {
   livereload.listen({port: process.env.LIVERELOAD_PORT});
   gulp.watch(['./style/**/*', './src/**/*'], ['refresh-page']);
   gulp.watch('./*.*', ['restart-server']);
@@ -72,7 +73,7 @@ gulp.task('img', function () {
     .pipe(gulp.dest('./public/images'));
 });
 
-gulp.task('dev-add-livereload', function() {
+gulp.task('dev-add-livereload', function () {
   process.env.DEV_ADD_LIVERELOAD = true;
 });
 

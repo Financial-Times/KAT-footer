@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import React from 'react';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
@@ -14,7 +16,7 @@ describe('FooterContactDetails', () => {
     email: 'test email'
   };
 
-  const footerContactDetails = (state = testData, action={}) => {
+  const footerContactDetails = (state = testData) => {
     return state;
   };
 
