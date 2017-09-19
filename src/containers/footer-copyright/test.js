@@ -59,7 +59,7 @@ describe('FooterCopyright', () => {
 
     const content = <div className='o-footer__copyright kat-footer__copyright' role='contentinfo'>
       <small>
-        <abbr title={testData.abbr.title} aria-label={testData.abbr.abbr}> {testData.abbr.label} </abbr> {testData.abbr.text}. {testData.footer} <a href={testData.footerLink.link} aria-label='F T Editorial Code of Practice'>{testData.footerLink.text}</a>
+        <abbr title={testData.abbr.title} aria-label={testData.abbr.abbr}> {testData.abbr.label} </abbr> {testData.abbr.text}. {testData.footer} <a href={testData.footerLink.link} data-trackable="ft-editorial-code-of-practice" aria-label="F T Editorial Code of Practice">{testData.footerLink.text}</a>
       </small>
     </div>;
 

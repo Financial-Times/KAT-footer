@@ -52,17 +52,16 @@ describe('FooterContactDetails', () => {
       <FooterContactDetails />
     </Provider>);
 
-    const content = <div className='kat-footer__contact-container'>
-      <div className='kat-footer__contact-item'>{testData.intro}</div>
-      <div className='kat-footer__contact-item'>
-        <a data-trackable='contact-phone-uk' href={`tel: ${testData.ukPhoneNumber}`}>{testData.ukPhoneNumber}</a>
+    const content = <div className="kat-footer__contact-container">
+      <div className="kat-footer__contact-item">{testData.intro}</div>
+      <div className="kat-footer__contact-item">
+        <a data-trackable="contact-phone-uk" href={`tel: ${testData.ukPhoneNumber}`}>{testData.ukPhoneNumber}</a>
         <span>{testData.phoneDelimiter}</span>
-        <a data-trackable='contact-phone-us' href={`tel: ${testData.usPhoneNumber}`}>{testData.usPhoneNumber}</a>
+        <a data-trackable="contact-phone-us" href={`tel: ${testData.usPhoneNumber}`}>{testData.usPhoneNumber}</a>
       </div>
-      <div className='kat-footer__contact-item'>
-        <a data-trackable='contact-email' href={`mailto: ${testData.email}`}>{testData.email}</a>
+      <div className="kat-footer__contact-item">
+        <a data-trackable="contact-email" href={`mailto: ${testData.email}`}>{testData.email}</a>
       </div>
-      <br></br>
     </div>;
 
     test('has the right content', () => {

@@ -6,6 +6,7 @@ test
 test2
 vendor
 coverage
+dist
 
 # Logs
 logs
@@ -25,6 +26,8 @@ docker-compose.yml
 
 .sass-lint.yml
 
-.eslintrc.js
-.editorconfig
 .pa11yci.js
+package-lock.json
+
+.editorconfig
+.eslintrc.js

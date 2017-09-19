@@ -8,50 +8,51 @@ describe('LegalLinks', () => {
   const testData = {
     links: [
       {
-        href: 'test',
-        label: 'test'
+        href: "test1",
+        "data-trackable": "test1",
+        label: "test 1"
       },
       {
-        href: 'test',
-        label: 'test'
+        href: "test2",
+        label: "test 2"
+      },
+      {
+        href: "test3",
+        "data-trackable": "test3",
+        label: "test 3"
       }
     ]
   };
 
-  const testNull = {
-    links: []
-  };
-
   describe('component', () => {
-    const wrapper = mount(<LegalLinks linksData={testData.links} />);
+    const wrapper = shallow(<LegalLinks linksData={testData.links} />);
 
-    const content =
-    <div>
-      <ul className='o-footer__legal-links'>
-        <li key={0}>
-          <a href={testData.links[0].href}>
-            {testData.links[0].label}
-          </a>
-        </li>
-        <li key={1}>
-          <a href={testData.links[1].href}>
-            {testData.links[1].label}
-          </a>
-        </li>
-      </ul>
-    </div>;
+    test('displays all the links given to it in the correct order', () => {
+      const links = wrapper.find('a');
 
-    test('has the right content', () => {
-      expect(wrapper.contains(content)).toEqual(true);
+      expect(links.length).toEqual(3);
+      expect(links.at(0).text()).toEqual('test 1');
+      expect(links.at(1).text()).toEqual('test 2');
+      expect(links.at(2).text()).toEqual('test 3');
+    });
+
+    test('outputs the data-trackable attribute if a value is provided', () => {
+      const linksWithDataTrackable = wrapper.find('a[data-trackable]');
+
+      expect(linksWithDataTrackable.length).toEqual(2);
+      expect(linksWithDataTrackable.at(0).prop('data-trackable')).toEqual('test1');
+      expect(linksWithDataTrackable.at(1).prop('data-trackable')).toEqual('test3');
     });
 
     test('matches snapshot', () => {
-      const wrapper = shallow(<LegalLinks linksData={testData.links} />);
       expect(wrapper.debug()).toMatchSnapshot();
     });
   });
 
-  describe('return null if there is no links', () => {
+  describe('return null if there are no links', () => {
+    const testNull = {
+      links: []
+    };
     const wrapper = mount(<LegalLinks linksData={testNull.links} />);
 
     test('has the right content', () => {

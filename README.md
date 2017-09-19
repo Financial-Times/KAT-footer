@@ -1,4 +1,4 @@
-# kat-footer [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
+# kat-footer v2 [![Circle CI](https://circleci.com/gh/Financial-Times/kat-footer/tree/v2.svg?style=svg)](https://circleci.com/gh/Financial-Times/kat-footer)
 
 Footer component for KAT.
 
@@ -14,18 +14,7 @@ $ bower install
 ```
 Then you can run `$ npm start` and go to `http://local.ft.com:5000/` in your browser to see the footer module running locally on your machine.
 
-To be able to manage footer main settings you can create an `.env` file in the root directory with the following variables:
-```
-NODE_ENV=development
-PORT=5000
-
-FOOTER_THEME="theme-dark"
-FOOTER_TYPE="short"
-FOOTER_PADDING_TOP="10"
-FOOTER_HELP_LINK="http://help.ft.com/help/b2b-support/knowledge-administration-tool/"
-```
-
-#### Important notes
+#### Troubleshooting installation
 If you see an error like `Error: Node Sass does not yet support your current environment: OS X 64-bit with Unsupported runtime` you will probably need to run `$ npm rebuild node-sass` to overcome this. In addition you might need to update `origami-build-tools`.
 
 ## Testing
@@ -49,11 +38,6 @@ If you want to update connected components with the latest footer version, you n
 2. Go to `bower.json` file of the component you want to update, and change `"kat-footer"` dependency version to the [newly released one](https://github.com/Financial-Times/kat-footer/releases).
 3. Run `$ bower install` in the component repository.
 
-The following KAT components are currently using `kat-footer`:
- - [kmt-overview](https://github.com/Financial-Times/kmt-overview)
- - [kmt-myft](https://github.com/Financial-Times/kmt-myft)
- - [kat-usage-report](https://github.com/Financial-Times/kat-usage-report)
-
 ### How to use the component
 
 #### Installation
@@ -61,6 +45,9 @@ The following KAT components are currently using `kat-footer`:
 $ bower install --S kat-footer
 ```
 #### Usage
+
+For the footer to sit at the bottom of the page/viewport (whichever is tallest), please make sure that the main `<div>` that wraps your page has a class of `kat-root`.
+
 ##### Load the CSS:
 ```scss
 @import '../bower_components/kat-footer/main';
@@ -76,19 +63,10 @@ combineReducers(Object.assign({}, parentAppReducers, { KatFooterNs }));
 ```
 Normal standalone use
 ```js
-rootEl: "#root" // {String|DOM element} - optional - Query string or DOM element inside which the KAT Footer will be placed.
-// then include and use in a component/container
-import { KatFooterContainer } from "kat-footer/main";
+// Include and use in a component/container
+import KatFooterContainer from "kat-footer";
 //...
 <KatFooterContainer />;
-```
-
-**Outside** React Redux app (normal standalone use)
-```js
-// include and use in a component/container
-import KatFooter from "kat-footer/main";
-//...
-KatFooter.init(options);
 ```
 
 ## Other important information

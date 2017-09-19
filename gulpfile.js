@@ -2,28 +2,28 @@ require('dotenv').config({silent: true});
 const gulp = require('gulp');
 const obt = require('origami-build-tools');
 const nodemon = require('gulp-nodemon');
-const exec = require('child_process').exec;
 const imagemin = require('gulp-imagemin');
 const size = require('gulp-size');
 const livereload = require('gulp-livereload');
 let appServer;
 
-const verifyFn = function () {
-  return obt.verify(gulp, {
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc'
-  });
-};
 
-gulp.task('build', ['global-config'], function () {
+gulp.task('build', function() {
   return obt.build(gulp, {
-    js: './main.js',
+    js: './src/index.js',
     sass: './style/main.scss',
     buildJs: 'bundle.js',
-    buildCss: 'bundle.css',
+    buildCss: 'kat-footer.css',
     buildFolder: 'public',
-    scssLintPath: './.scss-lint.yml',
-    esLintPath: './.eslintrc',
+    env: process.env.NODE_ENV
+  });
+});
+
+gulp.task('build-page', function() {
+  return obt.build(gulp, {
+    sass: './style/page.scss',
+    buildCss: 'page.css',
+    buildFolder: 'public',
     env: process.env.NODE_ENV
   });
 });
@@ -32,14 +32,11 @@ gulp.task('install', function () {
   return obt.install();
 });
 
-gulp.task('verify', verifyFn);
-gulp.task('dev-verify', ['img', 'watch'], verifyFn);
-
-gulp.task('test', function () {
+gulp.task('test', function() {
   return obt.test.npmTest(gulp);
 });
 
-gulp.task('serve', ['dev-add-livereload', 'build'], function (){
+gulp.task('serve', ['dev-add-livereload', 'build', 'build-page'], function(){
   appServer = nodemon({
     'script': 'server.js',
     'verbose': true,
@@ -55,12 +52,8 @@ gulp.task('restart-server', function () {
   appServer.restart();
 });
 
-gulp.task('refresh-page', ['build'], function () {
+gulp.task('refresh-page', ['build', 'build-page'], function() {
   livereload.changed('src/index.js');
-});
-
-gulp.task('global-config', function () {
-  exec('node generate-config.js');
 });
 
 gulp.task('watch', ['serve'], function () {
@@ -84,5 +77,5 @@ gulp.task('dev-add-livereload', function () {
   process.env.DEV_ADD_LIVERELOAD = true;
 });
 
-gulp.task('default', ['build', 'img']);
-gulp.task('dev', ['dev-verify']);
+gulp.task('default', ['build', 'build-page', 'img']);
+gulp.task('dev');

@@ -1,81 +1,61 @@
 $o-footer-is-silent: false;
 $o-fonts-is-silent: false;
-$o-typography-is-silent: false;
-@import '../bower_components/o-colors/main';
-@import '../bower_components/o-fonts/main';
-@import '../bower_components/o-footer/main';
-@import '../bower_components/o-typography/main';
+
+@import 'o-colors/main';
+@import 'o-fonts/main';
+@import 'o-footer/main';
 @include oColorsSetColor('claret-inverse', #4f1828);
+
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
-html {
-  @include oColorsFor(page, background);
-  height: 100%;
+// Add this class to your main page wrapper
+.kat-root {
+  min-height: 100%;
+  position: relative;
 }
 
-body {
-  // Remove space around the document
-  @include oColorsFor(page, background);
-  margin: 0;
-  height: 100%;
-}
-
-// scss-lint:disable IdSelector
-#kat-root {
-  height: 100%;
-}
-
+// The footer styling
 .kat-footer {
+  bottom: 0;
   font-family: $sans-serif;
+  left: 0;
   position: absolute;
   width: 100%;
-  bottom: 0;
-  left: 0;
-  border: 0;
-
-  &__wrapper {
-    min-height: 100%;
-    position: relative;
-  }
-
-  &__contact {
-    &-wrapper {
-      background-color: oColorsGetPaletteColor("claret");
-      padding: 15px 0;
-    }
-
-    &-item {
-      display: inline-block;
-      padding-right: 24px;
-      color: oColorsGetPaletteColor("white");
-
-      // scss-lint:disable NestingDepth
-      > a {
-        font-weight: 600;
-        color: oColorsGetPaletteColor("white");
-
-        &:hover,
-        &:focus {
-          color: oColorsGetPaletteColor("black-30");
-        }
-      }
-    }
-  }
 
   .o-footer__legal-links li {
+    &::before {
+      padding-left: 4px;
+    }
 
-      &::before {
-        padding-left: 4px;
-      }
-      &:first-child::before {
-        padding-left: 0;
-      }
-
+    &:first-child::before {
+      padding-left: 0;
+    }
   }
 
   .o-footer__copyright {
     abbr {
       text-decoration: none;
+    }
+  }
+}
+
+.kat-footer__contact-wrapper {
+  background-color: oColorsGetPaletteColor("claret");
+  padding: 15px 0;
+}
+
+.kat-footer__contact-item {
+  color: oColorsGetPaletteColor("white");
+  display: inline-block;
+  padding-right: 24px;
+
+  > a {
+    font-weight: 600;
+    color: oColorsGetPaletteColor("white");
+
+    &:hover,
+    &:focus {
+      color: oColorsGetPaletteColor("black-30");
     }
   }
 }

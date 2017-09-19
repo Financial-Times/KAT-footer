@@ -2,8 +2,8 @@
 
 exports[`FooterBrand component matches snapshot 1`] = `
 "<div className=\\"o-footer__brand\\">
-<div className=\\"o-footer__container\\">
-<div className=\\"o-footer__brand-logo\\" />
-</div>
+  <div className=\\"o-footer__container\\">
+    <div className=\\"o-footer__brand-logo\\" />
+  </div>
 </div>"
 `;
