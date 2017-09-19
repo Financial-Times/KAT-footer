@@ -8,8 +8,7 @@
     "url": "https://github.com/Financial-Times/kat-footer.git"
   },
   "scripts": {
-    "prestart": "./node_modules/.bin/gulp",
-    "start": "node server.js",
+    "start": "gulp serve",
     "heroku-postbuild": "./node_modules/.bin/bower install",
     "test": "jest dist/src/*",
     "testWatch": "jest dist/src/* --watch",
