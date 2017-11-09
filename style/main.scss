@@ -10,52 +10,52 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
 // Add this class to your main page wrapper
 .kat-root {
-  min-height: 100%;
-  position: relative;
+	min-height: 100%;
+	position: relative;
 }
 
 // The footer styling
 .kat-footer {
-  bottom: 0;
-  font-family: $sans-serif;
-  left: 0;
-  position: absolute;
-  width: 100%;
+	bottom: 0;
+	font-family: $sans-serif;
+	left: 0;
+	position: absolute;
+	width: 100%;
 
-  .o-footer__legal-links li {
-    &::before {
-      padding-left: 4px;
-    }
+	.o-footer__legal-links li {
+		&::before {
+			padding-left: 4px;
+		}
 
-    &:first-child::before {
-      padding-left: 0;
-    }
-  }
+		&:first-child::before {
+			padding-left: 0;
+		}
+	}
 
-  .o-footer__copyright {
-    abbr {
-      text-decoration: none;
-    }
-  }
+	.o-footer__copyright {
+		abbr {
+			text-decoration: none;
+		}
+	}
 }
 
 .kat-footer__contact-wrapper {
-  background-color: oColorsGetPaletteColor("claret");
-  padding: 15px 0;
+	background-color: oColorsGetPaletteColor("claret");
+	padding: 15px 0;
 }
 
 .kat-footer__contact-item {
-  color: oColorsGetPaletteColor("white");
-  display: inline-block;
-  padding-right: 24px;
+	color: oColorsGetPaletteColor("white");
+	display: inline-block;
+	padding-right: 24px;
 
-  > a {
-    font-weight: 600;
-    color: oColorsGetPaletteColor("white");
+	> a {
+		font-weight: 600;
+		color: oColorsGetPaletteColor("white");
 
-    &:hover,
-    &:focus {
-      color: oColorsGetPaletteColor("black-30");
-    }
-  }
+		&:hover,
+		&:focus {
+			color: oColorsGetPaletteColor("black-30");
+		}
+	}
 }

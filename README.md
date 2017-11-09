@@ -25,9 +25,9 @@ Tests for React components should be saved as `test.js` inside the folder for th
 
 ### Running the tests
 
- - To run a one-time test: `$ npm test`;
- - To run tests and watch for changes: `$ npm run testWatch`;
- - `$ npm test -- --coverage` to see the coverage of tested files.
+- To run a one-time test: `$ npm test`;
+- To run tests and watch for changes: `$ npm run testWatch`;
+- `$ npm test -- --coverage` to see the coverage of tested files.
 
 ## Deployment
 This component has been created to be included throughout other KAT components.
