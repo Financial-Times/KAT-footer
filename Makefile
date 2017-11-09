@@ -4,12 +4,11 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
-unit-test:
-	jest src/*
-
-test:
-	make unit-test verify
+test: verify
 
 build:
 	./node_modules/.bin/gulp
 	make build-n-makefile
+
+run:
+	./node_modules/.bin/nodemon demos/app.js
