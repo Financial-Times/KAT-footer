@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const obt = require('origami-build-tools');
 const nodemon = require('gulp-nodemon');
-const imagemin = require('gulp-imagemin');
-const size = require('gulp-size');
 const livereload = require('gulp-livereload');
 let appServer;
 
@@ -56,17 +54,6 @@ gulp.task('watch', ['serve'], function () {
 	livereload.listen({ port: process.env.LIVERELOAD_PORT });
 	gulp.watch(['./**/*.scss', './demos/**/*'], ['refresh-page']);
 	gulp.watch('./*.*', ['restart-server']);
-});
-
-gulp.task('img', function () {
-	return gulp.src('./style/images/*')
-		.pipe(imagemin({
-			progressive: true,
-			interlaced: true,
-			svgoPlugins: []
-		}))
-		.pipe(size({ showFiles: true, title: 'images compressed:' }))
-		.pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('dev-add-livereload', function () {
