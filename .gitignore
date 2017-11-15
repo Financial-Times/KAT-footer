@@ -15,6 +15,7 @@ npm-debug.log*
 
 # IDE directory
 /.idea
+.vscode
 
 # Docker dependencies
 system
