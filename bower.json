@@ -2,10 +2,7 @@
   "name": "kat-footer",
   "main": ["main.scss", "index.js"],
   "homepage": "https://github.com/Financial-Times/kat-footer",
-  "authors": [
-    "Razvan Boldea <razvan.boldea@ft.com>"
-  ],
-  "description": "react wrapper of o-footer",
+  "description": "wrapper of o-footer",
   "keywords": [
     "knowledge",
     "management",
