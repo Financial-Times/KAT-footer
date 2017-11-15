@@ -1,6 +1,9 @@
 {
   "name": "kat-footer",
-  "main": ["main.scss", "index.js"],
+  "main": [
+    "main.scss",
+    "index.js"
+  ],
   "homepage": "https://github.com/Financial-Times/kat-footer",
   "description": "wrapper of o-footer",
   "keywords": [
@@ -18,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "n-ui-foundations": "^2.4.0"
+    "n-ui-foundations": "^2.4.0",
+    "o-footer": "^6.0.6"
   }
 }
