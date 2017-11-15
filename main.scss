@@ -1,7 +1,59 @@
 @import 'n-ui-foundations/main';
 
-
 $o-footer-is-silent: false;
-@import 'o-footer/main';
+$o-fonts-is-silent: false;
 
-@import './style/main';
+@import 'o-colors/main';
+@import 'o-fonts/main';
+@import 'o-footer/main';
+@include oColorsSetColor('claret-inverse', #4f1828);
+$sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+
+// Add this class to your main page wrapper
+.kat-root {
+	min-height: 100%;
+	position: relative;
+}
+
+// The footer styling
+.kat-footer {
+	bottom: 0;
+	font-family: $sans-serif;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	.o-footer__legal-links li {
+		&::before {
+			padding-left: 4px;
+		}
+		&:first-child::before {
+			padding-left: 0;
+		}
+	}
+	.o-footer__copyright {
+		abbr {
+			text-decoration: none;
+		}
+	}
+}
+
+.kat-footer__contact-wrapper {
+	background-color: oColorsGetPaletteColor("claret");
+	padding: 15px 0;
+}
+
+.kat-footer__contact-item {
+	color: oColorsGetPaletteColor("white");
+	display: inline-block;
+	padding-right: 24px;
+	>a {
+		font-weight: 600;
+		color: oColorsGetPaletteColor("white");
+		&:hover,
+		&:focus {
+			color: oColorsGetPaletteColor("black-30");
+		}
+	}
+}
+
+
