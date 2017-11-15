@@ -56,4 +56,6 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 	}
 }
 
-
+.kat-footer__contact-container .kat-footer__contact-email {
+	color: oColorsGetPaletteColor("white");
+}

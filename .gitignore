@@ -27,7 +27,7 @@ docker-compose.yml
 
 .sass-lint.yml
 
-.pa11yci.js
+pa11y_screenCapture
 package-lock.json
 
 .editorconfig
