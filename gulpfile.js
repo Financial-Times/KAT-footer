@@ -6,7 +6,7 @@ let appServer;
 
 gulp.task('build', function () {
 	return obt.build(gulp, {
-		sass: './main.scss',
+		sass: './demos/main.scss',
 		buildCss: 'main.css',
 		buildFolder: 'public',
 		env: process.env.NODE_ENV
@@ -15,7 +15,7 @@ gulp.task('build', function () {
 
 gulp.task('build-page', function () {
 	return obt.build(gulp, {
-		sass: './main.scss',
+		sass: './demos/main.scss',
 		buildCss: 'main.css',
 		buildFolder: 'public',
 		env: process.env.NODE_ENV

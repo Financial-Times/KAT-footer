@@ -1,7 +1,4 @@
-@import 'n-ui-foundations/main';
-
 $o-footer-is-silent: false;
-$o-fonts-is-silent: false;
 
 @import 'o-colors/main';
 @import 'o-fonts/main';
@@ -10,32 +7,6 @@ $o-fonts-is-silent: false;
 $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
 // Add this class to your main page wrapper
-.kat-root {
-	min-height: 100%;
-	position: relative;
-}
-
-// The footer styling
-.kat-footer {
-	bottom: 0;
-	font-family: $sans-serif;
-	left: 0;
-	position: absolute;
-	width: 100%;
-	.o-footer__legal-links li {
-		&::before {
-			padding-left: 4px;
-		}
-		&:first-child::before {
-			padding-left: 0;
-		}
-	}
-	.o-footer__copyright {
-		abbr {
-			text-decoration: none;
-		}
-	}
-}
 
 .kat-footer__contact-wrapper {
 	background-color: oColorsGetPaletteColor("claret");
@@ -58,4 +29,9 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
 .kat-footer__contact-container .kat-footer__contact-email {
 	color: oColorsGetPaletteColor("white");
+}
+
+.o-footer {
+	margin-top: 10px;
+	bottom: 0;
 }
