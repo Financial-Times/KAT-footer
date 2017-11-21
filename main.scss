@@ -15,26 +15,8 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 
 .kat-footer {
 	bottom: 0;
-	font-family: $sans-serif;
-	left: 0;
 	position: absolute;
 	width: 100%;
-
-	.o-footer__legal-links li {
-		&::before {
-			padding-left: 4px;
-		}
-
-		&:first-child::before {
-			padding-left: 0;
-		}
-	}
-
-	.o-footer__copyright {
-		abbr {
-			text-decoration: none;
-		}
-	}
 }
 
 .kat-footer__contact-wrapper {
