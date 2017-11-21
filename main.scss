@@ -19,23 +19,23 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 	left: 0;
 	position: absolute;
 	width: 100%;
-  
+
 	.o-footer__legal-links li {
-	  &::before {
-		padding-left: 4px;
-	  }
-  
-	  &:first-child::before {
-		padding-left: 0;
-	  }
+		&::before {
+			padding-left: 4px;
+		}
+
+		&:first-child::before {
+			padding-left: 0;
+		}
 	}
-  
+
 	.o-footer__copyright {
-	  abbr {
-		text-decoration: none;
-	  }
+		abbr {
+			text-decoration: none;
+		}
 	}
-  }
+}
 
 .kat-footer__contact-wrapper {
 	background-color: oColorsGetPaletteColor("claret");
