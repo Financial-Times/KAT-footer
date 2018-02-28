@@ -30,12 +30,15 @@ $sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
 	display: inline-block;
 	padding-right: 24px;
 	>a {
-		font-weight: 600;
+		@include oTypographyLink;
+		@include oTypographySansBold(0);
 		color: oColorsGetPaletteColor("white");
 		&:hover,
 		&:focus {
 			color: oColorsGetPaletteColor("black-30");
 		}
+		margin-right: oTypographySpacingSize(3);
+		margin-left: oTypographySpacingSize(1);
 	}
 }
 
