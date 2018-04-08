@@ -1,1 +1,52 @@
-@import './style/main';
+$o-footer-is-silent: false;
+
+@import 'o-colors/main';
+@import 'o-fonts/main';
+@import 'o-footer/main';
+@include oColorsSetColor('claret-inverse', #4f1828);
+$sans-serif: oFontsGetFontFamilyWithFallbacks(MetricWeb);
+
+// Add this class to your main page wrapper
+
+.kat-root {
+	min-height: 100%;
+	position: relative;
+	padding-bottom: 20em;
+}
+
+.kat-footer {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.kat-footer__contact-wrapper {
+	background-color: oColorsGetPaletteColor("claret");
+	padding: 15px 0;
+}
+
+.kat-footer__contact-item {
+	color: oColorsGetPaletteColor("white");
+	display: inline-block;
+	padding-right: 24px;
+	>a {
+		@include oTypographyLink;
+		@include oTypographySansBold(0);
+		color: oColorsGetPaletteColor("white");
+		&:hover,
+		&:focus {
+			color: oColorsGetPaletteColor("black-30");
+		}
+		margin-right: oTypographySpacingSize(3);
+		margin-left: oTypographySpacingSize(1);
+	}
+}
+
+.kat-footer__contact-container .kat-footer__contact-email {
+	color: oColorsGetPaletteColor("white");
+}
+
+.o-footer {
+	margin-top: 10px;
+	bottom: 0;
+}

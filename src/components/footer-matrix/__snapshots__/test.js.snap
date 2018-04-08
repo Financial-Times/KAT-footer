@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`FooterMatrix matches snapshot 1`] = `
-"<nav className=\\"o-footer__matrix\\" role=\\"navigation\\" aria-label=\\"Useful links\\">
-  <MatrixGroup groupData={{...}} index={0} />
-  <MatrixGroup groupData={{...}} index={1} />
-</nav>"
-`;
