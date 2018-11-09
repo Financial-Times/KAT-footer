@@ -21,7 +21,9 @@
     "tests"
   ],
   "dependencies": {
-    "n-ui-foundations": "^2.4.0",
     "o-footer": "^6.0.6"
+  },
+  "devDependencies": {
+    "n-ui-foundations": "^v3.0.0"
   }
 }
